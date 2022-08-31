@@ -31,4 +31,4 @@ CREATE TABLE itens(
     valor float
 );
 
-oi
+
