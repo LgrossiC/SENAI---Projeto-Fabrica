@@ -1,0 +1,34 @@
+CREATE DATABASE vendapc;
+USE vendapc;
+CREATE TABLE clientes(
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(100)
+);
+CREATE TABLE produtos(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descrição varchar(100),
+    estoque INT not null,
+    valor float not null
+);
+
+CREATE TABLE venda(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	id_produto int,
+    id_clientes int,
+    FOREIGN KEY(id_produto) REFERENCES produtos(id),
+    FOREIGN KEY(id_clientes) REFERENCES clientes(id),
+    valor_produto float,
+    quantidade int,
+    valor_total float
+);
+CREATE TABLE itens(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	id_produto int,
+	FOREIGN KEY(id_produto) REFERENCES produtos(id),
+    descrição varchar(100),
+    componente varchar(30),
+    estoque int,
+    valor float
+);
+
+
