@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,8 +10,11 @@ namespace frontendteste24_08
 {
     public partial class ComponentesGamer : System.Web.UI.Page
     {
+        private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e) //Colocar o que irá ser executado quando a página abrir.
-        {
+        {      
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
+
 
         }
 
@@ -34,9 +38,6 @@ namespace frontendteste24_08
 
         }
 
-        protected void btnAdicionar_Click1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

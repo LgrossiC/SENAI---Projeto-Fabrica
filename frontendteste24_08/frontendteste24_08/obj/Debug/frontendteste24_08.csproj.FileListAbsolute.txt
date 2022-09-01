@@ -290,3 +290,7 @@ C:\Users\ALUNO\Desktop\projetodev\RenanFrontEnd---SENAI---Projeto-Fabrica\fronte
 C:\Users\ALUNO\Desktop\projetodev\RenanFrontEnd---SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.csproj.CopyComplete
 C:\Users\ALUNO\Desktop\projetodev\RenanFrontEnd---SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.dll
 C:\Users\ALUNO\Desktop\projetodev\RenanFrontEnd---SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.pdb
+C:\Users\ALUNO\Desktop\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.csprojAssemblyReference.cache
+C:\Users\ALUNO\Desktop\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.csproj.CoreCompileInputs.cache
+C:\Users\ALUNO\Desktop\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.dll
+C:\Users\ALUNO\Desktop\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.pdb
