@@ -38,10 +38,10 @@
                     CssClass="table table-sm table-bordered table-condensed table-responsive-sm table-hover table-striped"
                     AllowPaging="true" PageSize="10" OnRowCommand="grdProdutosGamer_RowCommand" OnPageIndexChanging="grdProdutosGamer_PageIndexChanging">
                         
-                        <!--Grid Lista para mostrar as infos-->
+                       
                         <Columns>
-                            <asp:BoundField HeaderText="Componentes" /> <!--Campo para mostrar os componentes-->
-                            <asp:BoundField HeaderText="Descrição" />   <!--Campo para mostrar a descrição-->
+                            <asp:BoundField HeaderText="Componentes" /> 
+                            <asp:BoundField HeaderText="Descrição" />   
                         </Columns>                   
 
                     </asp:GridView>
