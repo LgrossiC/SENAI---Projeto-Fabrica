@@ -1,0 +1,43 @@
+CREATE DATABASE lojapc2;
+USE lojapc2;
+CREATE TABLE clientes(
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(100)
+);
+CREATE TABLE computadores(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descrição varchar(100),
+    estoque int not null,
+    valor float not null
+);
+CREATE TABLE compra(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	id_pc int,
+    id_cliente int,
+    FOREIGN KEY(id_pc) REFERENCES computadores(id),
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id),
+    valor_pc float,
+    quantidade int,
+    valor float
+);
+CREATE TABLE componentes(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	id_pc int,
+	FOREIGN KEY(id_pc) REFERENCES computadores(id),
+    descrição varchar(100),
+    estoque int,
+    valor float,
+    tipo varchar(50)
+);
+CREATE TABLE participa_componente(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    id_componente int,
+	FOREIGN KEY(id_componente) REFERENCES componentes(id),
+    id_compra int,
+	FOREIGN KEY(id_compra) REFERENCES compra(id)
+);
+
+
+
+
+
