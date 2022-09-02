@@ -381,6 +381,7 @@ C:\Users\ALUNO\Desktop\31-08\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\
 C:\Users\ALUNO\Desktop\31-08\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.csproj.CopyComplete
 C:\Users\ALUNO\Desktop\31-08\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.dll
 C:\Users\ALUNO\Desktop\31-08\IgorGit\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.pdb
+<<<<<<< HEAD
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\bin\frontendteste24_08.dll.config
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\bin\frontendteste24_08.dll
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\bin\frontendteste24_08.pdb
@@ -468,3 +469,5 @@ C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\front
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.csproj.CopyComplete
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.dll
 C:\Users\ALUNO\Desktop\FrontEnd\SENAI---Projeto-Fabrica\frontendteste24_08\frontendteste24_08\obj\Debug\frontendteste24_08.pdb
+=======
+>>>>>>> 1a95ee3541f1a5a00099e016c502abb52e1ba25a
