@@ -160,8 +160,10 @@
     <Content Include="imgs\pcstudy.jpg" />
     <Content Include="imgs\preto.jpg" />
     <Content Include="Loja.aspx" />
+    <Content Include="newimgs\azulescuro.jpg" />
     <Content Include="newimgs\bgy.jpg" />
     <Content Include="newimgs\control.jpg" />
+    <Content Include="newimgs\iconpc.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
