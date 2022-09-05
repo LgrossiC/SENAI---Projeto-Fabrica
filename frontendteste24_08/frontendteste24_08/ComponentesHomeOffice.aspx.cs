@@ -9,9 +9,12 @@ namespace frontendteste24_08
 {
     public partial class ComponentesHomeOffice : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e) //Onde irá carregar as infos.
         {
 
         }
+
+      
+              
     }
 }
