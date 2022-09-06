@@ -94,7 +94,8 @@
                </div>
                
                <div class="col-sm-4 text-center" style="padding-top:5px">
-                   <asp:DropDownList runat="server" ID="ListPlacaMãe" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" CssClass="form-control listas">
+                   </asp:DropDownList>
                    <br /><br />
                    <asp:DropDownList runat="server" ID="ListProcessador" CssClass="form-control listas"></asp:DropDownList>
                    <br /><br />
@@ -102,7 +103,7 @@
                    <br /><br />
                    <asp:DropDownList runat="server" ID="ListArmazenamento" CssClass="form-control listas"></asp:DropDownList>
                </div>
-            </div>       SS
+            </div>       
    </div>
 
     <!------------------------------------------------------------------------------------------------------------------------->
