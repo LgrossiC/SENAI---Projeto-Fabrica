@@ -25,11 +25,7 @@
         </div>
         </div>
     </div>
-       
-    
-    
-    
-    
+                       
     <div class="jumbotron text-center" style="background-color:black">
             <div class="row">
 
@@ -54,25 +50,7 @@
                 </div>
             </div>
     </div>
-        
-        
-        
-
-       
-   
-
-        
-    
-    
- 
-    
-    
-        
-        
-    
-    
-
-
+                        
     
 
 </asp:Content>
