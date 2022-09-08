@@ -9,7 +9,7 @@ namespace frontendteste24_08
 {
     public partial class SiteMaster : MasterPage
     {
-        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=;Database=vendapc";
+        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=;Database=loja_pc";
         protected void Page_Load(object sender, EventArgs e)
         {
 
