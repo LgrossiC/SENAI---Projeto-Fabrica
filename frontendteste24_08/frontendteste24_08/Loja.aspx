@@ -36,20 +36,20 @@
             <div class="col-lg-4">
                 <br />
                 <div class="container" style="background-color:#000000">
-                <a href ="ComponentesGamer.aspx"><asp:image runat="server" imageurl="~/imgs/setup1.jpg" Width="400" BorderColor="Coral" Height="800"/></a>
+                <a href ="ComponentesHomeOffice.aspx?id=3"><asp:image runat="server" imageurl="~/imgs/setup1.jpg" Width="400" BorderColor="Coral" Height="800"/></a>
             </div>
                 </div>
             
             <div class="col-sm-4">
                 <br />
                 <div class="container" style="background-color:#000000">
-                <a href ="ComponentesGamer.aspx"><asp:image runat="server" imageurl="~/imgs/imgPCGAMER.png" Width="400" Height="800"/></a>
+                <a href ="ComponentesHomeOffice.aspx?id=2"><asp:image runat="server" imageurl="~/imgs/imgPCGAMER.png" Width="400" Height="800"/></a>
             </div>
                 </div>
                 <div class="col-sm-4">
                     <br />
                     <div class="container" style="background-color:#000000">
-                        <a href ="ComponentesGamer.aspx"><asp:image runat="server" imageurl="~/imgs/imgPCGAMER.png" Width="400" Height="800"/></a>
+                        <a href ="ComponentesHomeOffice.aspx?id=1"><asp:image runat="server" imageurl="~/imgs/imgPCGAMER.png" Width="400" Height="800"/></a>
                     </div>
                 </div>
             </div>
