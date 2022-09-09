@@ -16,6 +16,8 @@ namespace frontendteste24_08
             connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
+
+
                 connection.Open(); // gamer
                 ListPlacaMãe.Items.Clear();
                 var reader = new MySqlCommand("SELECT descrição, id, id_pc FROM componentes WHERE tipo = 'placa mãe'", connection).ExecuteReader();
@@ -111,12 +113,66 @@ namespace frontendteste24_08
                     ListSaídaSom.Items.Add(item);
                 }
                 connection.Close();
+
+                ListPlacaMãe_SelectedIndexChanged(null, null);
+                ListProcessador_SelectedIndexChanged(null, null);
+                ListFonte_SelectedIndexChanged(null, null);
+                ListArmazenamento_SelectedIndexChanged(null, null);
+                ListRAM_SelectedIndexChanged(null, null);
+                ListGabinete_SelectedIndexChanged(null, null);
+                ListPlacaVideo_SelectedIndexChanged(null, null);
+                ListSaídaSom_SelectedIndexChanged(null, null);
             }
+        }
+
+        private void ExibeValor(DropDownList dropDownList, TextBox textBox)
+        {
+            connection.Open();
+            var reader = new MySqlCommand($"SELECT valor FROM componentes WHERE id = {dropDownList.SelectedValue} ", connection).ExecuteReader();
+            reader.Read();
+            textBox.Text = Convert.ToString(reader.GetDouble("valor").ToString("C"));
+
+            connection.Close();
         }
 
         protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            ExibeValor(ListPlacaMãe, txtValorPlacaMae);
+        } 
+
+        protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListProcessador, txtValorProcessador);
+        }
+
+        protected void ListFonte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListFonte, txtValorFonte);
+        }
+
+        protected void ListArmazenamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListArmazenamento, txtValorArmazenamento);
+        }
+
+        protected void ListRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListRAM, txtValorRAM);
+        }
+
+        protected void ListGabinete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListGabinete, txtValorGabinete);
+        }
+
+        protected void ListPlacaVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListPlacaVideo, txtValorPlacaVideo);
+        }
+
+        protected void ListSaídaSom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ExibeValor(ListSaídaSom, txtValorSaidaSom);
         }
     }
 }

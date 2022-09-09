@@ -56,20 +56,7 @@
                 <br />
 
                 <div class="row">
-                    <div class="col-sm-2 nomeprodutos"> 
-                        <p class="text-center" style="padding-top:10px">Placa Mãe </p>
-                    </div>
-                    <div class="col-sm-1"></div>
                     
-                    <div class="col-sm-2 text-center nomeprodutos">
-                        <p class="text-center" style="padding-top:10px">Processadores</p>
-                    
-                    </div>
-                    <div class="col-sm-1"></div>
-                    
-                    <div class="col-sm-2 nomeprodutos" style="padding-top:10px">
-                        <p>Fontes</p>
-                    </div>
                 </div>
 
              </div>
@@ -86,43 +73,43 @@
        
            <div class="row">
                 <div class="col-sm-4 text-center" >
-                    <asp:TextBox runat="server" ID="txtPlacaMae" Text="Placa Mãe" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtPlacaMae" Text="Placa Mãe" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:TextBox runat="server" ID="txtProcessador" Text="Processador" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtProcessador" Text="Processador" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:TextBox runat="server" ID="txtFonte" Text="Fonte" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtFonte" Text="Fonte" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:TextBox runat="server" ID="txtArmazenamento" Text="Armazenamento" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtArmazenamento" Text="Armazenamento" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br /><br />
-                    <asp:TextBox runat="server" ID="txtRAM" Text="RAM" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtRAM" Text="RAM" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br /><br /><br />
-                    <asp:TextBox runat="server" ID="txtGabinete" Text="Gabinete" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtGabinete" Text="Gabinete" Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br /><br /><br />
-                    <asp:TextBox runat="server" ID="txtPlacaVideo" Text="Placa de Vídeo" CssClass="textbox"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtPlacaVideo" Text="Placa de Vídeo"  Enabled="false" CssClass="textbox"></asp:TextBox>
                     <br /><br /><br />
-                    <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" CssClass="textbox"></asp:TextBox>                   
+                    <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" Enabled="false" CssClass="textbox"></asp:TextBox>                   
                 </div>
                
                <div class="col-sm-2 text-center" style="padding-top:5px">
-                   <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" CssClass="form-control listas" Height="45px">
+                   <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control listas" Height="45px">
                    </asp:DropDownList>
                    <br />
-                   <asp:DropDownList runat="server" ID="ListProcessador" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListProcessador" CssClass="form-control listas"  OnSelectedIndexChanged="ListProcessador_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br />
-                   <asp:DropDownList runat="server" ID="ListFonte" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListFonte" CssClass="form-control listas"  OnSelectedIndexChanged="ListFonte_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br />
-                   <asp:DropDownList runat="server" ID="ListArmazenamento" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListArmazenamento" CssClass="form-control listas"  OnSelectedIndexChanged="ListArmazenamento_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br />
-                   <asp:DropDownList runat="server" ID="ListRAM" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListRAM" CssClass="form-control listas"  OnSelectedIndexChanged="ListRAM_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br />
-                   <asp:DropDownList runat="server" ID="ListGabinete" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListGabinete" CssClass="form-control listas"  OnSelectedIndexChanged="ListGabinete_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br /><br />
-                   <asp:DropDownList runat="server" ID="ListPlacaVideo" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListPlacaVideo" CssClass="form-control listas"  OnSelectedIndexChanged="ListPlacaVideo_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                    <br /><br />                   
-                   <asp:DropDownList runat="server" ID="ListSaídaSom" CssClass="form-control listas"></asp:DropDownList>
+                   <asp:DropDownList runat="server" ID="ListSaídaSom" CssClass="form-control listas"  OnSelectedIndexChanged="ListSaídaSom_SelectedIndexChanged" AutoPostBack="true" Height="45px"></asp:DropDownList>
                </div>
                <div class="col-sm-4 text-center" style="padding-top:5px">
                    <asp:TextBox runat="server" ID="txtValorPlacaMae" CssClass="textbox" ></asp:TextBox>
