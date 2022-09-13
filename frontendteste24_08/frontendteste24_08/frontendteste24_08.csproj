@@ -157,11 +157,17 @@
     <Content Include="imgs\pchomeoffice.jpg" />
     <Content Include="imgs\pcstudy.jpg" />
     <Content Include="imgs\preto.jpg" />
+    <Content Include="imgs\setupstudy.png" />
     <Content Include="Loja.aspx" />
     <Content Include="newimgs\azulescuro.jpg" />
     <Content Include="newimgs\bgy.jpg" />
     <Content Include="newimgs\control.jpg" />
     <Content Include="newimgs\iconpc.jpg" />
+    <Content Include="newimgs\iconpcgamer.jpg" />
+    <Content Include="newimgs\setupgamer.jpg" />
+    <Content Include="newimgs\setuphomeoffice.jpg" />
+    <Content Include="newimgs\setupstudy.jpg" />
+    <Content Include="newimgs\studysetup.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
