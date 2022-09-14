@@ -148,14 +148,10 @@
                    
                    <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>                   
                </div>
-<<<<<<< HEAD:frontendteste24_08/frontendteste24_08/ComponentesHomeOffice.aspx
-            </div>       
-=======
             </div>
         
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
         <asp:Button runat="server" ID="btnQuantidade" Text="+" OnClick="btnQuantidade_Click" CssClass="btn btn-success" />
->>>>>>> cf534e287e2b3ddf32d999e81edc59b3c11ffb71:PROJETO/frontendteste24_08/ComponentesHomeOffice.aspx
    </div>
 
     <!------------------------------------------------------------------------------------------------------------------------->
