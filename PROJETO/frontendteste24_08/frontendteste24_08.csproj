@@ -128,7 +128,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:frontendteste24_08/frontendteste24_08/frontendteste24_08.csproj
+=======
     <Content Include="Admin.aspx" />
+>>>>>>> cf534e287e2b3ddf32d999e81edc59b3c11ffb71:PROJETO/frontendteste24_08/frontendteste24_08.csproj
     <Content Include="ComponentesHomeOffice.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -208,6 +211,8 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:frontendteste24_08/frontendteste24_08/frontendteste24_08.csproj
+=======
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,6 +220,7 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+>>>>>>> cf534e287e2b3ddf32d999e81edc59b3c11ffb71:PROJETO/frontendteste24_08/frontendteste24_08.csproj
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ComponentesHomeOffice.aspx.cs">
