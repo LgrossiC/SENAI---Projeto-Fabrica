@@ -69,7 +69,6 @@
                         <p>Fontes</p>
                     </div>
                 </div>
-
             </div>
             <div class="col-sm-4">
                 <!--Imagem que ficará na direita da primeira jumbotron (Ainda não colocada)-->
@@ -109,8 +108,10 @@
                 <br />
                 <br />
                 <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" CssClass="textbox"></asp:TextBox>
-                 
                
+                </div>
+            </div>
+                       
                <div class="col-sm-2 text-center" style="padding-top:5px">
                    <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" CssClass="form-control listas" Height="45px">
                    </asp:DropDownList>
@@ -129,7 +130,8 @@
                    <br /><br />                   
                    <asp:DropDownList runat="server" ID="ListSaídaSom" CssClass="form-control listas"></asp:DropDownList>
                </div>
-               <div class="col-sm-4 text-center" style="padding-top:5px">
+               
+            <div class="col-sm-4 text-center" style="padding-top:5px">
                    <asp:TextBox runat="server" ID="txtValorPlacaMae" CssClass="textbox" ></asp:TextBox>
                    <br /><br />
                    
@@ -165,10 +167,9 @@
         <br />
          <p> Nome do Usuário</p>
          <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>       
-    </div>
+            </div>
         <asp:Button runat="server" ID="btnQuantidade" Text="+" OnClick="btnQuantidade_Click" CssClass="btn btn-success" />
-
-
-    <!------------------------------------------------------------------------------------------------------------------------->
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------->
 
 </asp:Content>
