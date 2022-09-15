@@ -175,8 +175,7 @@
                    
                    <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>                   
                </div>
-
-            </div>
+            </div>       
 
             <div class="col-sm-2 text-center" style="padding-top: 5px">
                 <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control listas" Height="45px">
