@@ -238,12 +238,30 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
         
         /// <summary>
-        /// Controle btnQuantidade.
+        /// Controle btnQuantidadeMais.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuantidade;
+        protected global::System.Web.UI.WebControls.Button btnQuantidadeMais;
+        
+        /// <summary>
+        /// Controle btnQuantidadeMenos.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnQuantidadeMenos;
+        
+        /// <summary>
+        /// Controle txtMostrarQuantidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMostrarQuantidade;
     }
 }
