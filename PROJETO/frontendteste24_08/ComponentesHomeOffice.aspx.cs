@@ -118,15 +118,5 @@ namespace frontendteste24_08
         {
             
         }
-
-        protected void btnQuantidade_Click(object sender, EventArgs e) //BÕTÃO PARA AUMENTAR QUANTIDADE.
-        {
-
-        }
-
-        protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
-        {
-
-        }
     }
 }
