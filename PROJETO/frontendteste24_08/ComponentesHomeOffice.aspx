@@ -108,7 +108,10 @@
                 <br />
                 <br />
                 <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" CssClass="textbox"></asp:TextBox>
-               
+
+
+                </div>
+              
                 </div>
             </div>
                        
@@ -155,7 +158,14 @@
                    
                    <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>                   
                </div>
+
                 
+
+            </div>
+        
+             <div class="row">
+
+
             <div class="col-sm-2 text-center" style="padding-top: 5px">
                                     
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
@@ -166,10 +176,19 @@
         <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
         <br />
          <p> Nome do Usuário</p>
+
          <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>       
             </div>
         <asp:Button runat="server" ID="btnQuantidade" Text="+" OnClick="btnQuantidade_Click" CssClass="btn btn-success" />
         </div>
 <!------------------------------------------------------------------------------------------------------------------------->
+
+         <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>     
+           </div>     
+        </div>
+        </div>
+
+    <!------------------------------------------------------------------------------------------------------------------------->
+
 
 </asp:Content>
