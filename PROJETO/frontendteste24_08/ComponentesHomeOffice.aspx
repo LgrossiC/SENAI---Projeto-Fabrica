@@ -157,6 +157,7 @@
             </div>
         
              <div class="row">
+
             <div class="col-sm-2 text-center" style="padding-top: 5px">
                                     
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
