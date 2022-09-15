@@ -253,6 +253,7 @@ namespace frontendteste24_08
         protected void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
 
+
         }
     }
 }

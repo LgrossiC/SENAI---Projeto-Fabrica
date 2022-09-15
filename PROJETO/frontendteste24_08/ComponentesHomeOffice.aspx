@@ -111,8 +111,12 @@
                 <br />
                 <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" CssClass="textbox"></asp:TextBox>
                 </div>
+<<<<<<< HEAD
             
     <!-------2ª Jumbotron da tela-------------------------------------------------------------------------------------------------------------------------------------->   
+=======
+                 
+>>>>>>> e68c377e99ed82825ba847e25cf90be497a10873
                
                <div class="col-sm-2 text-center" style="padding-top:5px">
                    <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" CssClass="form-control listas" Height="45px">
@@ -132,6 +136,7 @@
                    <br /><br />                   
                    <asp:DropDownList runat="server" ID="ListSaídaSom" CssClass="form-control listas"></asp:DropDownList>
                </div>
+<<<<<<< HEAD
                                  
             <div class="col-sm-4 text-center" style="padding-top: 5px">
                 <asp:TextBox runat="server" ID="txtValorPlacaMae" CssClass="textbox"></asp:TextBox>
@@ -180,6 +185,51 @@
              </div>
         
        
+=======
+               <div class="col-sm-4 text-center" style="padding-top:5px">
+                   <asp:TextBox runat="server" ID="txtValorPlacaMae" CssClass="textbox" ></asp:TextBox>
+                   <br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorProcessador" CssClass="textbox"></asp:TextBox>
+                   <br /><br />                   
+
+                   <asp:TextBox runat="server" ID="txtValorFonte" CssClass="textbox"></asp:TextBox>
+                   <br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorArmazenamento" CssClass="textbox"></asp:TextBox>
+                   <br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorRAM" CssClass="textbox"></asp:TextBox>
+                   <br /><br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorGabinete" CssClass="textbox"></asp:TextBox>
+                   <br /><br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorPlacaVideo" CssClass="textbox"></asp:TextBox>
+                   <br /><br /><br />
+                   
+                   <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>                   
+               </div>
+            </div>
+        
+             <div class="row">
+
+            <div class="col-sm-2 text-center" style="padding-top: 5px">
+                                    
+        <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
+
+        <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
+        <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
+        <br /><br />
+        <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
+        <br />
+         <p> Nome do Usuário</p>
+         <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>     
+           </div>     
+        </div>
+        </div>
+
+>>>>>>> e68c377e99ed82825ba847e25cf90be497a10873
 
 
     <!------------------------------------------------------------------------------------------------------------------------->
