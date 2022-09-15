@@ -11,5 +11,14 @@ namespace frontendteste24_08 {
     
     
     public partial class Admin {
+        
+        /// <summary>
+        /// Controle grdComponentes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdComponentes;
     }
 }

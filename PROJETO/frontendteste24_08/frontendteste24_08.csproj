@@ -128,7 +128,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Admin.aspx" />
+=======
+<<<<<<< HEAD:frontendteste24_08/frontendteste24_08/frontendteste24_08.csproj
+=======
+    <Content Include="Admin.aspx" />
+>>>>>>> cf534e287e2b3ddf32d999e81edc59b3c11ffb71:PROJETO/frontendteste24_08/frontendteste24_08.csproj
+>>>>>>> d96c44bc89d8da887418f7017c886a1da225dd3c
     <Content Include="ComponentesHomeOffice.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -165,6 +172,10 @@
     <Content Include="newimgs\control.jpg" />
     <Content Include="newimgs\iconpc.jpg" />
     <Content Include="newimgs\iconpcgamer.jpg" />
+    <Content Include="newimgs\iconpcstudy.jpg" />
+    <Content Include="newimgs\newiconpcgamer.png" />
+    <Content Include="newimgs\newiconpchomeoffice.png" />
+    <Content Include="newimgs\newiconpcstudy.png" />
     <Content Include="newimgs\setupgamer.jpg" />
     <Content Include="newimgs\setuphomeoffice.jpg" />
     <Content Include="newimgs\setupstudy.jpg" />
@@ -204,6 +215,11 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:frontendteste24_08/frontendteste24_08/frontendteste24_08.csproj
+=======
+>>>>>>> d96c44bc89d8da887418f7017c886a1da225dd3c
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +227,10 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+>>>>>>> cf534e287e2b3ddf32d999e81edc59b3c11ffb71:PROJETO/frontendteste24_08/frontendteste24_08.csproj
+>>>>>>> d96c44bc89d8da887418f7017c886a1da225dd3c
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ComponentesHomeOffice.aspx.cs">
