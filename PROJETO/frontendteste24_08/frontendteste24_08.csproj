@@ -165,6 +165,10 @@
     <Content Include="newimgs\control.jpg" />
     <Content Include="newimgs\iconpc.jpg" />
     <Content Include="newimgs\iconpcgamer.jpg" />
+    <Content Include="newimgs\iconpcstudy.jpg" />
+    <Content Include="newimgs\newiconpcgamer.png" />
+    <Content Include="newimgs\newiconpchomeoffice.png" />
+    <Content Include="newimgs\newiconpcstudy.png" />
     <Content Include="newimgs\setupgamer.jpg" />
     <Content Include="newimgs\setuphomeoffice.jpg" />
     <Content Include="newimgs\setupstudy.jpg" />
