@@ -115,7 +115,11 @@ namespace frontendteste24_08
                 #endregion
 
                 #region VALORES
+<<<<<<< HEAD
                 ListPlacaMãe_SelectedIndexChanged(null, null);
+=======
+                ListPlacaMãe_SelectedIndexChanged(null, null);              
+>>>>>>> 0d290866dccf1f85382deffc4882e30f62e1dacc
                 ListProcessador_SelectedIndexChanged(null, null);
                 ListSaídaSom_SelectedIndexChanged(null, null);
                 ListPlacaVideo_SelectedIndexChanged(null, null);
@@ -139,6 +143,7 @@ namespace frontendteste24_08
             }
             connection.Close();
         }
+
         protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
         {
             CarregaValores(txtValorPlacaMae, ListPlacaMãe);
@@ -180,8 +185,71 @@ namespace frontendteste24_08
         }
 
         protected void btnQuantidadeMenos_Click(object sender, EventArgs e)
-        {
 
+      
+
+        protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorPlacaMae, ListPlacaMãe);
+            ListPlacaMãe.Focus();
+        }
+
+        protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
+
+        {
+            CarregaValores(txtValorProcessador, ListProcessador);
+        }
+
+        protected void ListSaídaSom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorSaidaSom, ListSaídaSom);
+        }
+
+        protected void ListPlacaVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorPlacaVideo, ListPlacaVideo);
+        }
+
+        protected void ListGabinete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorGabinete, ListGabinete);
+        }
+
+        protected void ListRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorRAM, ListRAM);
+        }
+
+        protected void ListArmazenamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorArmazenamento, ListArmazenamento);
+        }
+
+        protected void ListFonte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorFonte, ListFonte);
+            txtMostrarQuantidade.Focus();
+        }
+        
+        protected void btnQuantidadeMais_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd + 1;
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
+        }
+
+        protected void btnQuantidadeMenos_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd - 1;
+            
+            if(qtd <= 0)
+            {
+                qtd = 1;
+            }
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
         }
 
         protected void btnQuantidadeMais_Click(object sender, EventArgs e)
