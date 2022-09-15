@@ -112,11 +112,7 @@
                 <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" CssClass="textbox"></asp:TextBox>
                 </div>
             
-
-
-    <!-------2ª Jumbotron da tela-------------------------------------------------------------------------------------------------------------------------------------->
-
-   
+    <!-------2ª Jumbotron da tela-------------------------------------------------------------------------------------------------------------------------------------->   
                
                <div class="col-sm-2 text-center" style="padding-top:5px">
                    <asp:DropDownList runat="server" ID="ListPlacaMãe" OnSelectedIndexChanged="ListPlacaMãe_SelectedIndexChanged" CssClass="form-control listas" Height="45px">
@@ -136,10 +132,7 @@
                    <br /><br />                   
                    <asp:DropDownList runat="server" ID="ListSaídaSom" CssClass="form-control listas"></asp:DropDownList>
                </div>
-              
-
-       
-            
+                                 
             <div class="col-sm-4 text-center" style="padding-top: 5px">
                 <asp:TextBox runat="server" ID="txtValorPlacaMae" CssClass="textbox"></asp:TextBox>
                 <br />
@@ -175,19 +168,18 @@
                 <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>
             </div>        
 
+    </div>
+              
+ 
+
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
         <asp:Button runat ="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click"/>
         <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
-           
-        
-        <br /><br />
+         <br /><br />
         <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox"></asp:TextBox>
-    </div>
-
-      
-        <asp:Button runat="server" ID="btnQuantidade" Text="+" OnClick="btnQuantidade_Click" CssClass="btn btn-success" />
-   </div>
-
+             </div>
+        
+       
 
 
     <!------------------------------------------------------------------------------------------------------------------------->

@@ -115,11 +115,11 @@ namespace frontendteste24_08
                 #endregion
 
                 #region VALORES
-<<<<<<< HEAD
+
                 ListPlacaMãe_SelectedIndexChanged(null, null);
-=======
+
                 ListPlacaMãe_SelectedIndexChanged(null, null);              
->>>>>>> 0d290866dccf1f85382deffc4882e30f62e1dacc
+
                 ListProcessador_SelectedIndexChanged(null, null);
                 ListSaídaSom_SelectedIndexChanged(null, null);
                 ListPlacaVideo_SelectedIndexChanged(null, null);
@@ -183,11 +183,8 @@ namespace frontendteste24_08
             CarregaValores(txtValorFonte, ListFonte);
 
         }
-
-        protected void btnQuantidadeMenos_Click(object sender, EventArgs e)
-
-      
-
+             
+/*
         protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
         {
             CarregaValores(txtValorPlacaMae, ListPlacaMãe);
@@ -229,7 +226,7 @@ namespace frontendteste24_08
         {
             CarregaValores(txtValorFonte, ListFonte);
             txtMostrarQuantidade.Focus();
-        }
+        }*/
         
         protected void btnQuantidadeMais_Click(object sender, EventArgs e)
         {
@@ -251,11 +248,7 @@ namespace frontendteste24_08
             txtMostrarQuantidade.Text = qtd.ToString();
             txtMostrarQuantidade.Focus();
         }
-
-        protected void btnQuantidadeMais_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
