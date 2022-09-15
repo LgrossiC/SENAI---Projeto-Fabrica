@@ -153,9 +153,9 @@
                    
                    <asp:TextBox runat="server" ID="txtValorSaidaSom" CssClass="textbox"></asp:TextBox>                   
                </div>
-
-            </div>                                      
-            </div>      
+                
+            <div class="col-sm-2 text-center" style="padding-top: 5px">
+                                    
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
 
         <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
