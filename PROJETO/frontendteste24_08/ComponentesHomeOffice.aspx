@@ -51,7 +51,9 @@
             <div class="col-sm-8 text-center">
                 <h1 style="color: white; font-family:'Copperplate'">CONFIRA NOSSOS PRODUTOS</h1>
                 <br />
+
                 <br />               
+
             </div>
             <div class="col-sm-4">
                 <!--Imagem que ficará na direita da primeira jumbotron (Ainda não colocada)-->
@@ -90,6 +92,7 @@
                 <br />
                 <br />
                 <br />
+
                 <asp:TextBox runat="server" ID="txtSaidaSom" Text="Saída de Som" Enabled="false" CssClass="textbox"></asp:TextBox>
                 </div>
                  
@@ -112,8 +115,10 @@
                    <br /><br />                   
                    <asp:DropDownList runat="server" ID="ListSaídaSom" OnSelectedIndexChanged="ListSaídaSom_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control listas"></asp:DropDownList>
                </div>
+
                <div class="col-sm-4 text-center" style="padding-top:5px">
                    <asp:TextBox runat="server" ID="txtValorPlacaMae" Enabled="false" CssClass="textbox" ></asp:TextBox>
+
                    <br /><br />
                    
                    <asp:TextBox runat="server" ID="txtValorProcessador" Enabled="false" CssClass="textbox"></asp:TextBox>
@@ -136,9 +141,11 @@
                    
                    <asp:TextBox runat="server" ID="txtValorSaidaSom" Enabled="false" CssClass="textbox"></asp:TextBox>                   
                </div>
-            </div>
+
         
              <div class="row">
+
+
             <div class="col-sm-2 text-center" style="padding-top: 5px">
                                     
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
@@ -149,13 +156,19 @@
         <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
         <br />
          <p> Nome do Usuário</p>
-         <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>     
-           </div>     
-        </div>
-        </div>
 
 
+         <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>       
+            </div>
+        <asp:Button runat="server" ID="btnQuantidade" Text="+" OnClick="btnQuantidade_Click" CssClass="btn btn-success" />
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------->          
+           </div>    
+        </div>
+        
+        
 
     <!------------------------------------------------------------------------------------------------------------------------->
+
 
 </asp:Content>
