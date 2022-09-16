@@ -206,7 +206,7 @@ namespace frontendteste24_08
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
         {
-           /*
+           
             connection.Open();
             var command = new MySqlCommand($@"
             INSERT INTO clientes (nome)
@@ -219,10 +219,10 @@ namespace frontendteste24_08
             command2.ExecuteNonQuery();
 
             var command3 = new MySqlCommand($@"
-            INSERT INTO participa_componente (id_componente, valor)
-            VALUES ('{ListPlacaMãe.SelectedValue}'), (SELECT valor, id FROM componentes WHERE id = {ListPlacaMãe.SelectedValue})", connection);
+            INSERT INTO participa_componente (id_componente)
+            VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
             command3.ExecuteNonQuery();
-            connection.Close();*/
+            connection.Close();
         }        
     }
 }
