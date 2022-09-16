@@ -16,6 +16,7 @@ namespace frontendteste24_08
             connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
+                #region LISTAS
                 connection.Open(); // gamer
                 ListPlacaMãe.Items.Clear();
                 var reader = new MySqlCommand("SELECT descrição, id, id_pc FROM componentes WHERE tipo = 'placa mãe'", connection).ExecuteReader();
@@ -111,22 +112,102 @@ namespace frontendteste24_08
                     ListSaídaSom.Items.Add(item);
                 }
                 connection.Close();
+                #endregion
+
+                #region VALORES
+                ListPlacaMãe_SelectedIndexChanged(null, null);              
+                ListProcessador_SelectedIndexChanged(null, null);
+                ListSaídaSom_SelectedIndexChanged(null, null);
+                ListPlacaVideo_SelectedIndexChanged(null, null);
+                ListGabinete_SelectedIndexChanged(null, null);
+                ListArmazenamento_SelectedIndexChanged(null, null);
+                ListPlacaMãe_SelectedIndexChanged(null, null);
+                ListPlacaMãe_SelectedIndexChanged(null, null);
+                ListRAM_SelectedIndexChanged(null, null);
+                ListFonte_SelectedIndexChanged(null, null);
+                #endregion
             }
         }
 
+        public void CarregaValores(TextBox textBox, DropDownList dropDown)
+        {
+            connection.Open();
+            var reader = new MySqlCommand($"SELECT valor FROM componentes WHERE id = " + dropDown.SelectedValue, connection).ExecuteReader();
+            if (reader.Read())
+            {
+                textBox.Text = reader.GetFloat("valor").ToString("C");
+            }
+            connection.Close();
+        }
+      
+
         protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CarregaValores(txtValorPlacaMae, ListPlacaMãe);
+            ListPlacaMãe.Focus();
         }
 
-        protected void btnQuantidade_Click(object sender, EventArgs e) //BÕTÃO PARA AUMENTAR QUANTIDADE.
+        protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
         {
+            CarregaValores(txtValorProcessador, ListProcessador);
+        }
 
+        protected void ListSaídaSom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorSaidaSom, ListSaídaSom);
+        }
+
+        protected void ListPlacaVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorPlacaVideo, ListPlacaVideo);
+        }
+
+        protected void ListGabinete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorGabinete, ListGabinete);
+        }
+
+        protected void ListRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorRAM, ListRAM);
+        }
+
+        protected void ListArmazenamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorArmazenamento, ListArmazenamento);
+        }
+
+        protected void ListFonte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorFonte, ListFonte);
+            txtMostrarQuantidade.Focus();
+        }
+        
+        protected void btnQuantidadeMais_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd + 1;
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
+        }
+
+        protected void btnQuantidadeMenos_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd - 1;
+            
+            if(qtd <= 0)
+            {
+                qtd = 1;
+            }
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
         }
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
         {
 
         }
+        
     }
 }
