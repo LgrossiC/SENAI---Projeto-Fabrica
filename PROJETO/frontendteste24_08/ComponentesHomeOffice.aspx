@@ -45,7 +45,27 @@
     </style>
 
     <!----------------------------------------------------------------------------------------------------------------->
-    <!--PRIMEIRA JUMBOTRON DA TELA-->
+     <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color:black">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:white; font-family:'Lucida Console'" runat="server" href="~/">Computadores</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav text-left">
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Loja">Produtos</a></li>
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Login">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+                    
+    <!--PRIMEIRA JUMBOTRON DA TELA-->                
     <div class="jumbotron containerborda text-center" style="background-color: #001133; background-image: url(/newimgs/azulescuro.jpg)">
         <div class="row">
             <div class="col-sm-8 text-center">
@@ -184,8 +204,6 @@
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
     </div>
     <!------------------------------------------------------------------------------------------------------------------------->
-
-
 
     <!------------------------------------------------------------------------------------------------------------------------->
 </asp:Content>
