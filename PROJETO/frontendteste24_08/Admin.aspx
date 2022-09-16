@@ -60,6 +60,7 @@
 
         </Columns>           
     </asp:GridView>
+
     </div>
 
 <asp:TextBox runat="server" ID="valor_total" ></asp:TextBox>
