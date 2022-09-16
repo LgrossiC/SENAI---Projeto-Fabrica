@@ -159,6 +159,7 @@
     <Content Include="imgs\pcstudy.jpg" />
     <Content Include="imgs\preto.jpg" />
     <Content Include="imgs\setupstudy.png" />
+    <Content Include="Login.aspx" />
     <Content Include="Loja.aspx" />
     <Content Include="newimgs\azulescuro.jpg" />
     <Content Include="newimgs\bgy.jpg" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Loja.aspx.cs">
       <DependentUpon>Loja.aspx</DependentUpon>

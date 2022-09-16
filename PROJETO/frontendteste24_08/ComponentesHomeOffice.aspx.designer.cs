@@ -229,15 +229,6 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtValorSaidaSom;
         
         /// <summary>
-        /// Controle btnFinalizarVenda.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
-        
-        /// <summary>
         /// Controle btnQuantidadeMais.
         /// </summary>
         /// <remarks>
@@ -274,12 +265,12 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox NomeUsuario;
         
         /// <summary>
-        /// Controle btnQuantidade.
+        /// Controle btnFinalizarVenda.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuantidade;
+        protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
     }
 }
