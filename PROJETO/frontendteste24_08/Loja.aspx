@@ -4,13 +4,10 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato:200');
-
-
         .abadecima{
             background-color:black;
             
         }
-
         body {  
             background-image: url(/imgs/preto.jpg);
             background: linear-gradient(75deg, rgba(2,6,56,1) 0%, rgba(1,4,41,1) 5%, rgba(0,2,22,1) 12%, rgba(0,0,0,1) 61%, rgba(0,0,0,1) 70%, rgba(0,4,54,1) 86%, rgba(0,3,51,1) 97%);
@@ -63,8 +60,8 @@
 
 
 <!--JUMBOTRON DO TITULO-->
-    <div class="jumbotron text-left fontedotitulo" style="background: linear-gradient(75deg, rgba(2,6,56,1) 0%, rgba(1,4,41,1) 5%, rgba(0,2,22,1) 12%, rgba(0,0,0,1) 61%, rgba(0,0,0,1) 70%, rgba(0,4,54,1) 86%, rgba(0,3,51,1) 97%);">
-        <h1 style="font-family: Mauno">*Titulo do Pagina*</h1>
+    <div class="jumbotron text-left fontedotitulo" style="background-image: url(/newimgs/azulescuro.jpg);">
+        <h1 style="font-family: Mauno">StorageComputers</h1>
     </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------------->
     

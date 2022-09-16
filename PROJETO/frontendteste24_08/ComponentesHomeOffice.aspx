@@ -42,6 +42,13 @@
         .fundojumbotron {
             background: linear-gradient(50deg, rgba(15,19,27,1) 0%, rgba(5,26,69,1) 27%, rgba(4,25,42,1) 47%, rgba(0,0,0,1) 89%);
         }
+        .botão {
+            border-color: white;
+            background: linear-gradient(100deg, rgba(113,113,136,1) 0%, rgba(0,0,42,1) 28%, rgba(0,0,42,1) 72%, rgba(113,113,136,1) 95%);
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 28px;
+        }
     </style>
 
     <!----------------------------------------------------------------------------------------------------------------->
@@ -201,7 +208,7 @@
             <br />
         </div>
         <br />
-        <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn btn-success" />
+        <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
     </div>
     <!------------------------------------------------------------------------------------------------------------------------->
 
