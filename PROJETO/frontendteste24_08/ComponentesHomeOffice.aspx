@@ -43,6 +43,7 @@
             background: linear-gradient(50deg, rgba(15,19,27,1) 0%, rgba(5,26,69,1) 27%, rgba(4,25,42,1) 47%, rgba(0,0,0,1) 89%);
         }
 
+
         .botão {
             border-color: white;
             background: linear-gradient(100deg, rgba(113,113,136,1) 0%, rgba(0,0,42,1) 28%, rgba(0,0,42,1) 72%, rgba(113,113,136,1) 95%);
@@ -53,27 +54,29 @@
     </style>
 
     <!----------------------------------------------------------------------------------------------------------------->
-    <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color: black">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="color: white; font-family: 'Lucida Console'" runat="server" href="~/">Computadores</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav text-left">
-                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/Loja">Produtos</a></li>
-                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
-                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/Login">Admin</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <!--PRIMEIRA JUMBOTRON DA TELA-->
+     <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color:black">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:white; font-family:'Lucida Console'" runat="server" href="~/">Computadores</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav text-left">
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Loja">Produtos</a></li>
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
+                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Login">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+                    
+    <!--PRIMEIRA JUMBOTRON DA TELA-->                
+
     <div class="jumbotron containerborda text-center" style="background-color: #001133; background-image: url(/newimgs/azulescuro.jpg)">
         <div class="row">
             <div class="col-sm-8 text-center">
@@ -154,36 +157,6 @@
             <div class="col-sm-4 text-center" style="padding-top: 5px">
                 <asp:TextBox runat="server" ID="txtValorPlacaMae" Enabled="false" CssClass="textbox"></asp:TextBox>
 
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorProcessador" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorFonte" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorArmazenamento" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorRAM" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorGabinete" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-                <br />
-
-                <asp:TextBox runat="server" ID="txtValorPlacaVideo" Enabled="false" CssClass="textbox"></asp:TextBox>
-                <br />
-                <br />
-                <br />
-
                 <asp:TextBox runat="server" ID="txtValorSaidaSom" Enabled="false" CssClass="textbox"></asp:TextBox>
             </div>
 
@@ -193,6 +166,7 @@
         <br />
         <br />
         <br />
+
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
@@ -219,6 +193,7 @@
         <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
     </div>
     <!------------------------------------------------------------------------------------------------------------------------->
+
 
     <!------------------------------------------------------------------------------------------------------------------------->
 </asp:Content>
