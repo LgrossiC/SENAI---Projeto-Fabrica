@@ -1,0 +1,44 @@
+
+●	Botão finalizar venda
+- Iniciar o back-end do botão que irá armazenar as informações selecionadas (componentes desejados e nome do comprador) no banco de dados. 
+
+●	Finalizar o front-end 
+- Finalizar o front-end da primeira e segunda página e iniciar o da página do administrador (a qual conterá os relatórios das vendas).
+
+●	Front-end da segunda página
+- Campo para inserir a quantidade de computadores e campo para inserir o nome do usuário.
+
+●	Back-end da segunda página
+- Back-end para armazenar quantidade de computadores e nome de usuário no banco de dados.
+
+●	Botão de finalizar venda
+- Botão que envia as informações da venda para o banco de dados.
+
+●	Front-end da página do administrador
+- Interface da página que exibirá os relatórios de venda.
+
+●	Back-end da página do administrador
+- Programação back-end do que irá constituir os relatórios de venda. (Estoque fixo, quantidade de componentes que precisa comprar, valor de cada um e valor total).
+
+
+●	Login do administrador
+- Usuário e senha fixos no login do administrador.
+
+●	Diagrama de classes
+- Criação do diagrama de classes.
+
+●	Aperfeiçoar front-end
+- Retoques e conclusão da interface do sistema.
+
+
+
+
+Sprint 4 (12.09.2022 - 16.09.2022) – Scrum Master: Igor Vital
+●	Front-end da segunda página
+●	Back-end da segunda página
+●	Botão de finalizar venda
+●	Front-end da página do administrador
+●	Back-end da página do administrador
+●	Login do administrador
+●	Diagrama de classes
+●	Aperfeiçoar front-end

@@ -184,50 +184,8 @@ namespace frontendteste24_08
 
         }
              
-/*
-        protected void ListPlacaMãe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorPlacaMae, ListPlacaMãe);
-            ListPlacaMãe.Focus();
-        }
 
-        protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
 
-        {
-            CarregaValores(txtValorProcessador, ListProcessador);
-        }
-
-        protected void ListSaídaSom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorSaidaSom, ListSaídaSom);
-        }
-
-        protected void ListPlacaVideo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorPlacaVideo, ListPlacaVideo);
-        }
-
-        protected void ListGabinete_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorGabinete, ListGabinete);
-        }
-
-        protected void ListRAM_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorRAM, ListRAM);
-        }
-
-        protected void ListArmazenamento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorArmazenamento, ListArmazenamento);
-        }
-
-        protected void ListFonte_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CarregaValores(txtValorFonte, ListFonte);
-            txtMostrarQuantidade.Focus();
-        }*/
-        
         protected void btnQuantidadeMais_Click(object sender, EventArgs e)
         {
             var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
