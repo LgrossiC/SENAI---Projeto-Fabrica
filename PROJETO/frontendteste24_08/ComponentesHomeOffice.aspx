@@ -194,31 +194,36 @@
         <br />
         <br />
         <div class="row">
-            <div class="col-sm-4"></div>
             <div class="col-sm-4">
+
                 <div class="row">
-                    
-                    <div class="col-sm-1">
-                        <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
-                        <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
-                        <br />
-                        <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
+
+                    <div class="col-sm-3">
+                        <div class="row">
+
+                            <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox" Placeholder="Nome do Cliente"></asp:TextBox><br />
+                            <br />
+                            <asp:TextBox runat="server" ID="CnpjUsuario" CssClass="textbox" placeholder="CNPJ do Cliente"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
+                            <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
+                            <br /> <br />
+                            <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
+                            <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
+                        </div>
                     </div>
+                    <br />
+
                 </div>
                 <br />
                 <br />
-
                 <div class="col-sm-4"></div>
+                <br />
             </div>
-
-            <p style="color: white">Nome do Cliente </p>
-            <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>
             <br />
         </div>
-        <br />
-        <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
-    </div>
-    <!------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
 
-    <!------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
 </asp:Content>
