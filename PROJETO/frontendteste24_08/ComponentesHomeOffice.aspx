@@ -43,8 +43,6 @@
             background: linear-gradient(50deg, rgba(15,19,27,1) 0%, rgba(5,26,69,1) 27%, rgba(4,25,42,1) 47%, rgba(0,0,0,1) 89%);
         }
 
-        <<<<<<< HEAD
-        ======= > > > > > > > 33d1652e0029bb0cfd3561af28c70e86fcf2ae2c
         .botão {
             border-color: white;
             background: linear-gradient(100deg, rgba(113,113,136,1) 0%, rgba(0,0,42,1) 28%, rgba(0,0,42,1) 72%, rgba(113,113,136,1) 95%);
@@ -54,7 +52,8 @@
         }
     </style>
 
-    <!----------------------------------------------------------------------------------------------------------------->
+    <!--PRIMEIRA JUMBOTRON DA TELA-->
+
     <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color: black">
         <div class="container">
             <div class="navbar-header">
@@ -75,22 +74,6 @@
         </div>
     </div>
 
-    <!--PRIMEIRA JUMBOTRON DA TELA-->
-    <div class="jumbotron containerborda text-center" style="background-color: #001133; background-image: url(/newimgs/azulescuro.jpg)">
-        <div class="row">
-            <div class="col-sm-8 text-center">
-                <h1 style="color: white; font-family: 'Copperplate'">CONFIRA NOSSOS PRODUTOS</h1>
-                <br />
-
-                <br />
-
-            </div>
-            <div class="col-sm-4">
-                <!--Imagem que ficará na direita da primeira jumbotron (Ainda não colocada)-->
-            </div>
-        </div>
-    </div>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
     <!-------2ª Jumbotron da tela-------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -200,31 +183,26 @@
 
                     <div class="col-sm-3">
                         <div class="row">
-
                             <asp:TextBox runat="server" ID="txtNomeUsuario" CssClass="textbox" Placeholder="Nome do Cliente"></asp:TextBox><br />
                             <br />
                             <asp:TextBox runat="server" ID="txtCnpjUsuario" CssClass="textbox" placeholder="CNPJ do Cliente"></asp:TextBox>
                             <br />
                             <br />
                             <asp:TextBox runat="server" ID="txtEmailUsuario" CssClass="textbox" placeholder="Digite o email"></asp:TextBox>
-                            <br /><br />
+                            <br />
+                            <br />
                             <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
                             <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
                             <br />
                             <br />
                             <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
                             <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão" />
-                            
+
                         </div>
                     </div>
                     <br />
                 </div>
-                <br />
-                <br />
-                <div class="col-sm-4"></div>
-                <br />
             </div>
-            <br />
         </div>
-        <!------------------------------------------------------------------------------------------------------------------------->
+    </div>
 </asp:Content>
