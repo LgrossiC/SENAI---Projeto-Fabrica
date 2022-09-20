@@ -16,6 +16,8 @@ namespace frontendteste24_08
             connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
+                var id = Request.QueryString["id"].ToString();
+
                 #region LISTAS
                 connection.Open(); // gamer
                 ListPlacaMãe.Items.Clear();
@@ -210,24 +212,63 @@ namespace frontendteste24_08
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
-           
+
             connection.Open();
+            var reader = new MySqlCommand("SELECT estoque FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            int estoque = reader.GetInt32(0);
+            int qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+
+            if (estoque < qtd)
+            {
+                SiteMaster.ExibirAlert(this, "Estoque insuficiente!");
+                return;
+            }
+
+            connection.Open();
+           
+
+            connection.Open();
+            var id_compra = new MySqlCommand("SELECT id FROM compra", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+            
+            connection.Open();
+            var id_componente = new MySqlCommand("SELECT id FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+            connection.Open();
+            var valor_componente = new MySqlCommand("SELECT valor FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+            connection.Open();
+
             var command = new MySqlCommand($@"
             INSERT INTO clientes (nome)
-            VALUES ('{NomeUsuario.Text}')", connection);
+            VALUES ('{txtNomeUsuario.Text}')", connection);
             command.ExecuteNonQuery();
 
+            reader = new MySqlCommand("SELECT MAX(id) ultimo from clientes", connection).ExecuteReader();
+            reader.Read();
+            var id_cliente = reader.GetInt32(0);
+            connection.Close();
+            connection.Close();
 
             var command2 = new MySqlCommand($@"
-            INSERT INTO compra (quantidade)
-            VALUES ('{txtMostrarQuantidade.Text}')", connection);
+            INSERT INTO compra (quantidade, id_pc, id_cliente)
+            VALUES ('{txtMostrarQuantidade.Text}','{id_pc}','{id_cliente}')", connection);
             command2.ExecuteNonQuery();
-
+           
             var command3 = new MySqlCommand($@"
-            INSERT INTO participa_componente (id_componente)
-            VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
+            INSERT INTO participa_componente (id_componente, id_compra, valor)
+            VALUES ('{id_componente}', '{id_compra}', '{valor_componente}')", connection);
             command3.ExecuteNonQuery();
-            connection.Close();
+
+            connection.Close();           
+            
+            SiteMaster.ExibirAlert(this, "Compra realizada com sucesso!");
         }        
 
     }

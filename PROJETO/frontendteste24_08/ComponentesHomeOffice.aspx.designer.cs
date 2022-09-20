@@ -13,6 +13,78 @@ namespace frontendteste24_08 {
     public partial class ComponentesHomeOffice {
         
         /// <summary>
+        /// Controle txtPlacaMae.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaMae;
+        
+        /// <summary>
+        /// Controle txtProcessador.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProcessador;
+        
+        /// <summary>
+        /// Controle txtFonte.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFonte;
+        
+        /// <summary>
+        /// Controle txtArmazenamento.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtArmazenamento;
+        
+        /// <summary>
+        /// Controle txtRAM.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRAM;
+        
+        /// <summary>
+        /// Controle txtGabinete.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGabinete;
+        
+        /// <summary>
+        /// Controle txtPlacaVideo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaVideo;
+        
+        /// <summary>
+        /// Controle txtSaidaSom.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSaidaSom;
+        
+        /// <summary>
         /// Controle ListPlacaMãe.
         /// </summary>
         /// <remarks>
@@ -157,15 +229,6 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtValorSaidaSom;
         
         /// <summary>
-        /// Controle btnFinalizarVenda.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
-        
-        /// <summary>
         /// Controle btnQuantidadeMais.
         /// </summary>
         /// <remarks>
@@ -193,12 +256,21 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtMostrarQuantidade;
         
         /// <summary>
-        /// Controle NomeUsuario.
+        /// Controle txtNomeUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NomeUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
+        
+        /// <summary>
+        /// Controle btnFinalizarVenda.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
     }
 }
