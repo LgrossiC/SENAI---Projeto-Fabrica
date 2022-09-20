@@ -43,6 +43,8 @@
             background: linear-gradient(50deg, rgba(15,19,27,1) 0%, rgba(5,26,69,1) 27%, rgba(4,25,42,1) 47%, rgba(0,0,0,1) 89%);
         }
 
+        <<<<<<< HEAD
+        ======= > > > > > > > 33d1652e0029bb0cfd3561af28c70e86fcf2ae2c
         .botão {
             border-color: white;
             background: linear-gradient(100deg, rgba(113,113,136,1) 0%, rgba(0,0,42,1) 28%, rgba(0,0,42,1) 72%, rgba(113,113,136,1) 95%);
@@ -183,16 +185,14 @@
                 <br />
                 <br />
                 <br />
-
                 <asp:TextBox runat="server" ID="txtValorSaidaSom" Enabled="false" CssClass="textbox"></asp:TextBox>
             </div>
-
-
             <br />
         </div>
         <br />
         <br />
         <br />
+
         <div class="row">
             <div class="col-sm-4">
 
@@ -201,20 +201,23 @@
                     <div class="col-sm-3">
                         <div class="row">
 
-                            <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox" Placeholder="Nome do Cliente"></asp:TextBox><br />
+                            <asp:TextBox runat="server" ID="txtNomeUsuario" CssClass="textbox" Placeholder="Nome do Cliente"></asp:TextBox><br />
                             <br />
-                            <asp:TextBox runat="server" ID="CnpjUsuario" CssClass="textbox" placeholder="CNPJ do Cliente"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtCnpjUsuario" CssClass="textbox" placeholder="CNPJ do Cliente"></asp:TextBox>
                             <br />
                             <br />
+                            <asp:TextBox runat="server" ID="txtEmailUsuario" CssClass="textbox" placeholder="Digite o email"></asp:TextBox>
+                            <br /><br />
                             <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
                             <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
-                            <br /> <br />
+                            <br />
+                            <br />
                             <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
-                            <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
+                            <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão" />
+                            
                         </div>
                     </div>
                     <br />
-
                 </div>
                 <br />
                 <br />
@@ -223,7 +226,5 @@
             </div>
             <br />
         </div>
-        <!------------------------------------------------------------------------------------------------------------------------->
-
         <!------------------------------------------------------------------------------------------------------------------------->
 </asp:Content>

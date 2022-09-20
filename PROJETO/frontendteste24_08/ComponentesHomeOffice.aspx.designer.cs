@@ -229,22 +229,31 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtValorSaidaSom;
         
         /// <summary>
-        /// Controle NomeUsuario.
+        /// Controle txtNomeUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NomeUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
         
         /// <summary>
-        /// Controle CnpjUsuario.
+        /// Controle txtCnpjUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CnpjUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtCnpjUsuario;
+        
+        /// <summary>
+        /// Controle txtEmailUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmailUsuario;
         
         /// <summary>
         /// Controle btnQuantidadeMais.
