@@ -159,16 +159,23 @@
     <Content Include="imgs\pcstudy.jpg" />
     <Content Include="imgs\preto.jpg" />
     <Content Include="imgs\setupstudy.png" />
+    <Content Include="Login.aspx" />
     <Content Include="Loja.aspx" />
     <Content Include="newimgs\azulescuro.jpg" />
     <Content Include="newimgs\bgy.jpg" />
     <Content Include="newimgs\control.jpg" />
     <Content Include="newimgs\iconpc.jpg" />
     <Content Include="newimgs\iconpcgamer.jpg" />
+    <Content Include="newimgs\iconpcgamer1.png" />
+    <Content Include="newimgs\iconpcgamer2.png" />
+    <Content Include="newimgs\iconpcgamer3.png" />
     <Content Include="newimgs\iconpcstudy.jpg" />
     <Content Include="newimgs\newiconpcgamer.png" />
     <Content Include="newimgs\newiconpchomeoffice.png" />
     <Content Include="newimgs\newiconpcstudy.png" />
+    <Content Include="newimgs\pcgamer1.jpg" />
+    <Content Include="newimgs\pchomeoffice1.jpg" />
+    <Content Include="newimgs\pcstudy1.jpg" />
     <Content Include="newimgs\setupgamer.jpg" />
     <Content Include="newimgs\setuphomeoffice.jpg" />
     <Content Include="newimgs\setupstudy.jpg" />
@@ -226,6 +233,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Loja.aspx.cs">
       <DependentUpon>Loja.aspx</DependentUpon>
