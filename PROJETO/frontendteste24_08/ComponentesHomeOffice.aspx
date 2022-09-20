@@ -8,7 +8,7 @@
 
         .textbox { /*Fundo da textbox dos componentes*/
             background-color: #000d1a;
-            font-family: Cooperplate;
+            font-family:'Times New Roman';
             color: white;
             font-size: 30px;
             border-color: white;
@@ -24,7 +24,7 @@
         .listas { /*Cor do fundo das listas*/
             background-color: #ffd9b3;
             color: white;
-            font-family: 'Montserrat';
+            font-family: 'Times New Roman';
             background-color: #000d1a;
             font-size: 21px;
         }
@@ -32,7 +32,7 @@
         .nomeprodutos { /*Nome dos produtos que aparecem no começo da tela*/
             background: linear-gradient(185deg, rgba(0,0,0,1) 27%, rgba(2,0,33,1) 45%, rgba(1,0,22,1) 58%, rgba(49,47,87,1) 91%);
             color: white;
-            font-family: 'Montserrat';
+            font-family: 'Times New Roman';
         }
 
         .fundopc {
