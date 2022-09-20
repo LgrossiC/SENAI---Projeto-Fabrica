@@ -229,6 +229,33 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtValorSaidaSom;
         
         /// <summary>
+        /// Controle txtNomeUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
+        
+        /// <summary>
+        /// Controle txtCnpjUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCnpjUsuario;
+        
+        /// <summary>
+        /// Controle txtEmailUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmailUsuario;
+        
+        /// <summary>
         /// Controle btnQuantidadeMais.
         /// </summary>
         /// <remarks>
@@ -254,15 +281,6 @@ namespace frontendteste24_08 {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMostrarQuantidade;
-        
-        /// <summary>
-        /// Controle NomeUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NomeUsuario;
         
         /// <summary>
         /// Controle btnFinalizarVenda.

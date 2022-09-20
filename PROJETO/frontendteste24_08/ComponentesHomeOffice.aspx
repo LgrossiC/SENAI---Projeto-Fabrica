@@ -43,7 +43,6 @@
             background: linear-gradient(50deg, rgba(15,19,27,1) 0%, rgba(5,26,69,1) 27%, rgba(4,25,42,1) 47%, rgba(0,0,0,1) 89%);
         }
 
-
         .botão {
             border-color: white;
             background: linear-gradient(100deg, rgba(113,113,136,1) 0%, rgba(0,0,42,1) 28%, rgba(0,0,42,1) 72%, rgba(113,113,136,1) 95%);
@@ -53,45 +52,28 @@
         }
     </style>
 
-    <!----------------------------------------------------------------------------------------------------------------->
+    <!--PRIMEIRA JUMBOTRON DA TELA-->
 
-     <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color:black">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" style="color:white; font-family:'Lucida Console'" runat="server" href="~/">Computadores</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav text-left">
-                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Loja">Produtos</a></li>
-                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
-                        <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Login">Admin</a></li>
-                    </ul>
-                </div>
+    <div class="navbar navbar-inverse navbar-fixed-top abadecima" style="background-color: black">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color: white; font-family: 'Lucida Console'" runat="server" href="~/">Computadores</a>
             </div>
-    </div>
-                    
-    <!--PRIMEIRA JUMBOTRON DA TELA-->                
-
-    <div class="jumbotron containerborda text-center" style="background-color: #001133; background-image: url(/newimgs/azulescuro.jpg)">
-        <div class="row">
-            <div class="col-sm-8 text-center">
-                <h1 style="color: white; font-family: 'Copperplate'">CONFIRA NOSSOS PRODUTOS</h1>
-                <br />
-
-                <br />
-
-            </div>
-            <div class="col-sm-4">
-                <!--Imagem que ficará na direita da primeira jumbotron (Ainda não colocada)-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav text-left">
+                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/Loja">Produtos</a></li>
+                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
+                    <li style="color: white; font-family: 'Lucida Console'"><a runat="server" href="~/Login">Admin</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
 
     <!-------2ª Jumbotron da tela-------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -157,10 +139,37 @@
             <div class="col-sm-4 text-center" style="padding-top: 5px">
                 <asp:TextBox runat="server" ID="txtValorPlacaMae" Enabled="false" CssClass="textbox"></asp:TextBox>
 
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorProcessador" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorFonte" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorArmazenamento" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorRAM" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorGabinete" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+                <br />
+
+                <asp:TextBox runat="server" ID="txtValorPlacaVideo" Enabled="false" CssClass="textbox"></asp:TextBox>
+                <br />
+                <br />
+                <br />
                 <asp:TextBox runat="server" ID="txtValorSaidaSom" Enabled="false" CssClass="textbox"></asp:TextBox>
             </div>
-
-
             <br />
         </div>
         <br />
@@ -168,32 +177,32 @@
         <br />
 
         <div class="row">
-            <div class="col-sm-4"></div>
             <div class="col-sm-4">
+
                 <div class="row">
-                    
-                    <div class="col-sm-1">
-                        <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
-                        <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
-                        <br />
-                        <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
+
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <asp:TextBox runat="server" ID="txtNomeUsuario" CssClass="textbox" Placeholder="Nome do Cliente"></asp:TextBox><br />
+                            <br />
+                            <asp:TextBox runat="server" ID="txtCnpjUsuario" CssClass="textbox" placeholder="CNPJ do Cliente"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:TextBox runat="server" ID="txtEmailUsuario" CssClass="textbox" placeholder="Digite o email"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button runat="server" ID="btnQuantidadeMais" Text="+" OnClick="btnQuantidadeMais_Click" CssClass="btn btn-success" />
+                            <asp:Button runat="server" ID="btnQuantidadeMenos" Text="-" OnClick="btnQuantidadeMenos_Click" CssClass="btn btn-danger" />
+                            <br />
+                            <br />
+                            <asp:TextBox runat="server" ID="txtMostrarQuantidade" CssClass="textbox" Text="1"></asp:TextBox>
+                            <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão" />
+
+                        </div>
                     </div>
+                    <br />
                 </div>
-                <br />
-                <br />
-
-                <div class="col-sm-4"></div>
             </div>
-
-            <p style="color: white">Nome do Cliente </p>
-            <asp:TextBox runat="server" ID="NomeUsuario" CssClass="textbox"></asp:TextBox>
-            <br />
         </div>
-        <br />
-        <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" OnClick="btnFinalizarVenda_Click" CssClass="btn botão  " />
     </div>
-    <!------------------------------------------------------------------------------------------------------------------------->
-
-
-    <!------------------------------------------------------------------------------------------------------------------------->
 </asp:Content>
