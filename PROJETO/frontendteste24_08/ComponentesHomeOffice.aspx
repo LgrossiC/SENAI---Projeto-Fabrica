@@ -8,7 +8,9 @@
 
         .textbox { /*Fundo da textbox dos componentes*/
             background-color: #000d1a;
-            font-family: 'Times New Roman';
+
+            font-family:'Times New Roman';
+
             color: white;
             font-size: 30px;
             border-color: white;
