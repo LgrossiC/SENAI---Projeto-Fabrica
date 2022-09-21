@@ -223,6 +223,30 @@ namespace frontendteste24_08
             var command = new MySqlCommand($@"
             INSERT INTO clientes (nome, cnpj, email)
             VALUES ('{txtNomeUsuario.Text}','{txtCnpjUsuario.Text}','{txtEmailUsuario.Text}' )", connection);
+
+            connection.Open();
+            var reader = new MySqlCommand("SELECT estoque FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            int estoque = reader.GetInt32(0);
+            int qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            connection.Close();
+
+            connection.Open();
+            var id_pc = new MySqlCommand("SELECT id FROM computadores", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+            connection.Open();
+            var id_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+
+            connection.Open();
+
+            var command = new MySqlCommand($@"
+            INSERT INTO clientes (nome)
+            VALUES ('{txtNomeUsuario.Text}')", connection);
             command.ExecuteNonQuery();
 
 
@@ -241,6 +265,7 @@ namespace frontendteste24_08
             VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
             command3.ExecuteNonQuery();
 
+
             var command5 = new MySqlCommand($@"
             INSERT INTO clientes (CNPJ)
             VALUES ('{txtCnpjUsuario.Text}')", connection);
@@ -250,7 +275,6 @@ namespace frontendteste24_08
             INSERT INTO clientes (EMAIL)
             VALUES ('{txtEmailUsuario.Text}')", connection);
             command6.ExecuteNonQuery();
-
             connection.Close();
             if (estoque < qtd)
             {
@@ -260,6 +284,10 @@ namespace frontendteste24_08
 
             SiteMaster.ExibirAlert(this, "Compra realizada com sucesso!");
 
+
         }
+
+        }        
+
     }
 }
