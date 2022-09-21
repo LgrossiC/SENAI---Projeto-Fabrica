@@ -229,6 +229,60 @@ namespace frontendteste24_08 {
         protected global::System.Web.UI.WebControls.TextBox txtValorSaidaSom;
         
         /// <summary>
+        /// Controle txtNomeUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
+        
+        /// <summary>
+        /// Controle txtCnpjUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCnpjUsuario;
+        
+        /// <summary>
+        /// Controle txtEmailUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmailUsuario;
+        
+        /// <summary>
+        /// Controle btnQuantidadeMais.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnQuantidadeMais;
+        
+        /// <summary>
+        /// Controle btnQuantidadeMenos.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnQuantidadeMenos;
+        
+        /// <summary>
+        /// Controle txtMostrarQuantidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMostrarQuantidade;
+        
+        /// <summary>
         /// Controle btnFinalizarVenda.
         /// </summary>
         /// <remarks>
@@ -236,6 +290,7 @@ namespace frontendteste24_08 {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
+<<<<<<< HEAD
         
         /// <summary>
         /// Controle btnQuantidadeMais.
@@ -281,5 +336,7 @@ namespace frontendteste24_08 {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnQuantidade;
+=======
+>>>>>>> 61ae249a15b0ce8ccbcaa022cc8e430f68362d1d
     }
 }

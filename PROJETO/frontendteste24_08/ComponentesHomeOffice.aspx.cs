@@ -145,6 +145,7 @@ namespace frontendteste24_08
         {
             CarregaValores(txtValorPlacaMae, ListPlacaMãe);
             ListPlacaMãe.Focus();
+<<<<<<< HEAD
         }
 
         protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,10 +205,118 @@ namespace frontendteste24_08
             txtMostrarQuantidade.Focus();
         }
 
-        protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
-        {
+=======
+        }
 
+        protected void ListProcessador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorProcessador, ListProcessador);
+        }
+
+        protected void ListSaídaSom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorSaidaSom, ListSaídaSom);
+        }
+
+        protected void ListPlacaVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorPlacaVideo, ListPlacaVideo);
+        }
+
+        protected void ListGabinete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorGabinete, ListGabinete);
+        }
+
+        protected void ListRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorRAM, ListRAM);
+        }
+
+        protected void ListArmazenamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorArmazenamento, ListArmazenamento);
+        }
+
+        protected void ListFonte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregaValores(txtValorFonte, ListFonte);
+            txtMostrarQuantidade.Focus();
         }
         
+        protected void btnQuantidadeMais_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd + 1;
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
+        }
+
+        protected void btnQuantidadeMenos_Click(object sender, EventArgs e)
+        {
+            var qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            qtd = qtd - 1;
+            
+            if(qtd <= 0)
+            {
+                qtd = 1;
+            }
+            txtMostrarQuantidade.Text = qtd.ToString();
+            txtMostrarQuantidade.Focus();
+        }
+>>>>>>> 61ae249a15b0ce8ccbcaa022cc8e430f68362d1d
+        protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
+
+<<<<<<< HEAD
+        }
+        
+=======
+        {
+            connection.Open();
+            var reader = new MySqlCommand("SELECT estoque FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            int estoque = reader.GetInt32(0);
+            int qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            connection.Close();
+
+            connection.Open();
+            var id_pc = new MySqlCommand("SELECT id FROM computadores", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+            connection.Open();
+            var id_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+
+            connection.Open();
+
+            var command = new MySqlCommand($@"
+            INSERT INTO clientes (nome)
+            VALUES ('{txtNomeUsuario.Text}')", connection);
+            command.ExecuteNonQuery();
+
+            var command2 = new MySqlCommand($@"
+            INSERT INTO compra (quantidade, id_pc, id_cliente)
+            VALUES ('{txtMostrarQuantidade.Text}','{id_pc}','{id_cliente}')", connection);
+            command2.ExecuteNonQuery();
+
+            var command3 = new MySqlCommand($@"
+            INSERT INTO participa_componente (id_componente)
+            VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
+            command3.ExecuteNonQuery();
+
+            connection.Close();
+            if (estoque < qtd)
+            {
+                SiteMaster.ExibirAlert(this, "Estoque insuficiente!");
+                return;
+            }
+
+            SiteMaster.ExibirAlert(this, "Compra realizada com sucesso!");
+
+        }        
+>>>>>>> 61ae249a15b0ce8ccbcaa022cc8e430f68362d1d
     }
 }
