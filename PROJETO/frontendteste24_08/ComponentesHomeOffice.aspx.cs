@@ -355,7 +355,7 @@ namespace frontendteste24_08
                 return;
             }
 
-            if (!Regex.IsMatch(txtNomeUsuario.Text, @"^[a-zA-Z]+$"))
+            if (!Regex.IsMatch(txtNomeUsuario.Text, @"^[a-zA-Z]"))
             {
                 SiteMaster.ExibirAlert(this, "Insira um nome válido");
                 txtNomeUsuario.Text = "";
