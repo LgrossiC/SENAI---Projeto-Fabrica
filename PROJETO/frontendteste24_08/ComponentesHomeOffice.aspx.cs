@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -17,6 +18,7 @@ namespace frontendteste24_08
             if (!IsPostBack)
             {
                 var id_pc = Convert.ToInt32(Request.QueryString["id"].ToString());
+
                 #region LISTAS
                 connection.Open(); // gamer
                 ListPlacaMãe.Items.Clear();
@@ -204,62 +206,237 @@ namespace frontendteste24_08
             txtMostrarQuantidade.Text = qtd.ToString();
             txtMostrarQuantidade.Focus();
         }
-        protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
+
+
+        bool ValidaEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean VerificaCnpj(String cnpj)
 
         {
-            connection.Open();
-            var reader = new MySqlCommand("SELECT estoque FROM componentes", connection).ExecuteReader();
-            reader.Read();
-            int estoque = reader.GetInt32(0);
-            int qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
-            connection.Close();
 
-            var id_pc = Convert.ToInt32(Request.QueryString["id"].ToString());
-           
+            if (Regex.IsMatch(cnpj, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)"))
 
-
-            connection.Open();
-
-            var command = new MySqlCommand($@"
-            INSERT INTO clientes (nome, cnpj, email)
-            VALUES ('{txtNomeUsuario.Text}','{txtCnpjUsuario.Text}','{txtEmailUsuario.Text}' )", connection);
-            command.ExecuteNonQuery();
-
-
-            var reader_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
-            reader_cliente.Read();
-            var id_cliente = reader_cliente.GetInt32(0);
-
-
-            var command2 = new MySqlCommand($@"
-            INSERT INTO compra (quantidade, id_pc, id_cliente)
-            VALUES ('{txtMostrarQuantidade.Text}','{id_pc}','{id_cliente}')", connection);
-            command2.ExecuteNonQuery();
-
-            var command3 = new MySqlCommand($@"
-            INSERT INTO participa_componente (id_componente)
-            VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
-            command3.ExecuteNonQuery();
-
-            var command5 = new MySqlCommand($@"
-            INSERT INTO clientes (CNPJ)
-            VALUES ('{txtCnpjUsuario.Text}')", connection);
-            command5.ExecuteNonQuery();
-
-            var command6 = new MySqlCommand($@"
-            INSERT INTO clientes (EMAIL)
-            VALUES ('{txtEmailUsuario.Text}')", connection);
-            command6.ExecuteNonQuery();
-
-            connection.Close();
-            if (estoque < qtd)
             {
-                SiteMaster.ExibirAlert(this, "Estoque insuficiente!");
+
+                return validaCnpj(cnpj);
+
+            }
+
+            else
+
+            {
+
+                return false;
+
+            }
+
+        }
+
+        private static Boolean validaCnpj(String cnpj)
+
+        {
+
+            Int32[] digitos, soma, resultado;
+
+            Int32 nrDig;
+
+            String ftmt;
+
+            Boolean[] cnpjOk;
+
+            cnpj = cnpj.Replace("/", "");
+
+            cnpj = cnpj.Replace(".", "");
+
+            cnpj = cnpj.Replace("-", "");
+
+            if (cnpj == "00000000000000")
+
+            {
+
+                return false;
+
+            }
+
+            ftmt = "6543298765432";
+
+            digitos = new Int32[14];
+
+            soma = new Int32[2];
+
+            soma[0] = 0;
+
+            soma[1] = 0;
+
+            resultado = new Int32[2];
+
+            resultado[0] = 0;
+
+            resultado[1] = 0;
+
+            cnpjOk = new Boolean[2];
+
+            cnpjOk[0] = false;
+
+            cnpjOk[1] = false;
+
+            try
+            {
+                for (nrDig = 0; nrDig < 14; nrDig++)
+
+                {
+
+                    digitos[nrDig] = int.Parse(cnpj.Substring(nrDig, 1));
+
+                    if (nrDig <= 11)
+
+                        soma[0] += (digitos[nrDig] *
+
+                        int.Parse(ftmt.Substring(nrDig + 1, 1)));
+
+                    if (nrDig <= 12)
+
+                        soma[1] += (digitos[nrDig] *
+
+                        int.Parse(ftmt.Substring(nrDig, 1)));
+
+                }
+
+                for (nrDig = 0; nrDig < 2; nrDig++)
+
+                {
+
+                    resultado[nrDig] = (soma[nrDig] % 11);
+
+                    if ((resultado[nrDig] == 0) || (resultado[nrDig] == 1))
+
+                        cnpjOk[nrDig] = (digitos[12 + nrDig] == 0);
+
+                    else
+
+                        cnpjOk[nrDig] = (digitos[12 + nrDig] == (
+
+                        11 - resultado[nrDig]));
+
+                }
+
+                return (cnpjOk[0] && cnpjOk[1]);
+            }
+            catch
+
+            {
+                return false;
+
+            }
+
+        }
+
+        protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
+        {
+            if ((txtNomeUsuario.Text == "") || (txtEmailUsuario.Text == "") || (txtCnpjUsuario.Text == ""))
+            {
+                SiteMaster.ExibirAlert(this, "Todos os campos são obrigatórios");
                 return;
             }
 
-            SiteMaster.ExibirAlert(this, "Compra realizada com sucesso!");
+            string email_user = Convert.ToString(txtEmailUsuario.Text);
+            string cnpj_user = Convert.ToString(txtCnpjUsuario.Text);
 
+            if (validaCnpj(cnpj_user) == false)
+            {
+                SiteMaster.ExibirAlert(this, "Cnpj inválido!");
+                return;
+            }
+
+            if (ValidaEmail(email_user) == false)
+            {
+                SiteMaster.ExibirAlert(this, "E-mail inválido!");
+                return;
+            }
+
+            var id_pc = Convert.ToInt32(Request.QueryString["id"].ToString());
+
+            connection.Open();
+            var insert_clientes = new MySqlCommand($@"
+            INSERT INTO clientes (nome, cnpj, email)
+            VALUES ('{txtNomeUsuario.Text}','{txtCnpjUsuario.Text}','{txtEmailUsuario.Text}' )", connection);
+            insert_clientes.ExecuteNonQuery();
+            connection.Close();
+
+            connection.Open();
+            var reader_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
+            reader_cliente.Read();
+            var id_cliente = reader_cliente.GetInt32(0);
+            connection.Close();
+
+            connection.Open();
+            var insert_compra = new MySqlCommand($@"
+            INSERT INTO compra (quantidade, id_pc, id_cliente)
+            VALUES ('{txtMostrarQuantidade.Text}','{id_pc}','{id_cliente}')", connection);
+            insert_compra.ExecuteNonQuery();
+            connection.Close();
+
+            connection.Open();
+            var reader_compra = new MySqlCommand("SELECT MAX(id) from compra", connection).ExecuteReader();
+            reader_compra.Read();
+            var id_compra = reader_compra.GetInt32(0);
+            connection.Close();
+
+            List<DropDownList> lista_drop = new List<DropDownList>
+            {
+                ListPlacaMãe,
+                ListProcessador,
+                ListFonte,
+                ListArmazenamento,
+                ListRAM,
+                ListGabinete,
+                ListPlacaVideo,
+                ListSaídaSom
+            };
+
+            List<TextBox> lista_txt = new List<TextBox>
+            {
+                txtValorPlacaMae,
+                txtValorProcessador,
+                txtValorFonte,
+                txtValorArmazenamento,
+                txtValorRAM,
+                txtValorGabinete,
+                txtValorPlacaVideo,
+                txtValorSaidaSom
+            };
+
+            for (int i = 0; i < lista_drop.Count; i++)
+            {
+                connection.Open();
+                var id_componente = lista_drop[i].SelectedValue;
+                var insert_participa = new MySqlCommand($@"
+                INSERT INTO participa_componente (id_componente, valor, id_compra)
+                VALUES ('{id_componente}', '{lista_txt[i].Text.Replace(",", ".").Replace("R$ ", "")}', '{id_compra}')", connection);
+                insert_participa.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            connection.Close();
+
+            SiteMaster.ExibirAlert(this, "Compra realizada com sucesso!");
+            txtNomeUsuario.Text = "";
+            txtEmailUsuario.Text = "";
+            txtCnpjUsuario.Text = "";
         }
     }
+
 }
+
+
