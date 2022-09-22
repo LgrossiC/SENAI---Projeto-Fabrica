@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -341,12 +342,23 @@ namespace frontendteste24_08
             }
 
         }
+        
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
         {
             if ((txtNomeUsuario.Text == "") || (txtEmailUsuario.Text == "") || (txtCnpjUsuario.Text == ""))
             {
                 SiteMaster.ExibirAlert(this, "Todos os campos são obrigatórios");
+                txtNomeUsuario.Text = "";
+                txtEmailUsuario.Text = "";
+                txtCnpjUsuario.Text = "";
+                return;
+            }
+
+            if (!Regex.IsMatch(txtNomeUsuario.Text, @"^[a-zA-Z]+$"))
+            {
+                SiteMaster.ExibirAlert(this, "Insira um nome válido");
+                txtNomeUsuario.Text = "";
                 return;
             }
 
@@ -356,12 +368,14 @@ namespace frontendteste24_08
             if (validaCnpj(cnpj_user) == false)
             {
                 SiteMaster.ExibirAlert(this, "Cnpj inválido!");
+                txtCnpjUsuario.Text = "";
                 return;
             }
 
             if (ValidaEmail(email_user) == false)
             {
                 SiteMaster.ExibirAlert(this, "E-mail inválido!");
+                txtEmailUsuario.Text = "";
                 return;
             }
 
