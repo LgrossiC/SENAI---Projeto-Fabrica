@@ -29,9 +29,23 @@ namespace frontendteste24_08
             tabela.Columns.Add("gastos");
 
             connection.Open();
+            var commando1 = new MySqlCommand($@"select sum(quantidade), p.id_componente from participa_componente p
+                                                inner join compra v on p.id_compra = v.id
+                                                inner join componentes c on p.id_componente = c.id
+                                                group by p.id_componente, c.descrição
+                                                order by c.descrição;", connection);
+            var reader = commando1.ExecuteReader();
+            while (reader.Read())
+            {
+                int vendidos = reader.GetInt32("sum(quantidade)");
+            }
+            connection.Close();
+
+            connection.Open();
             double total_geral = 0;
+
             var commando = new MySqlCommand($"SELECT descrição, tipo, estoque, valor FROM componentes", connection);
-            var reader = commando.ExecuteReader();
+            reader = commando.ExecuteReader();
             while (reader.Read())
             {             
                 int estoque = reader.GetInt32("estoque");
@@ -39,7 +53,9 @@ namespace frontendteste24_08
                 var linha = tabela.NewRow();
                 linha["descricao"] = reader.GetString("descrição");
                 linha["tipo"] = reader.GetString("tipo");
-                int comprar = 1000 - estoque;
+
+                int comprar = vendidos-estoque;
+
                 double valor_t = valor_c * comprar;
                 total_geral = total_geral + valor_t;
                 linha["comprar"] = comprar;
@@ -55,7 +71,10 @@ namespace frontendteste24_08
             
             connection.Close();
             valor_total.Text = Convert.ToString(total_geral.ToString("C"));
+
+
         }
+
 
         protected void compra_realizada_Click(object sender, EventArgs e)
         {
