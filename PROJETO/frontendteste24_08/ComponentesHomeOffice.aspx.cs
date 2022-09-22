@@ -225,8 +225,74 @@ namespace frontendteste24_08
 
         {
 
+<<<<<<< HEAD
             if (Regex.IsMatch(cnpj, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)"))
 
+=======
+            var id_pc = Convert.ToInt32(Request.QueryString["id"].ToString());
+           
+
+
+            connection.Open();
+
+            var command = new MySqlCommand($@"
+            INSERT INTO clientes (nome, cnpj, email)
+            VALUES ('{txtNomeUsuario.Text}','{txtCnpjUsuario.Text}','{txtEmailUsuario.Text}' )", connection);
+
+            connection.Open();
+            var reader = new MySqlCommand("SELECT estoque FROM componentes", connection).ExecuteReader();
+            reader.Read();
+            int estoque = reader.GetInt32(0);
+            int qtd = Convert.ToInt32(txtMostrarQuantidade.Text);
+            connection.Close();
+
+            connection.Open();
+            var id_pc = new MySqlCommand("SELECT id FROM computadores", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+            connection.Open();
+            var id_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
+            reader.Read();
+            connection.Close();
+
+
+            connection.Open();
+
+            var command = new MySqlCommand($@"
+            INSERT INTO clientes (nome)
+            VALUES ('{txtNomeUsuario.Text}')", connection);
+            command.ExecuteNonQuery();
+
+
+            var reader_cliente = new MySqlCommand("SELECT MAX(id) from clientes", connection).ExecuteReader();
+            reader_cliente.Read();
+            var id_cliente = reader_cliente.GetInt32(0);
+
+
+            var command2 = new MySqlCommand($@"
+            INSERT INTO compra (quantidade, id_pc, id_cliente)
+            VALUES ('{txtMostrarQuantidade.Text}','{id_pc}','{id_cliente}')", connection);
+            command2.ExecuteNonQuery();
+
+            var command3 = new MySqlCommand($@"
+            INSERT INTO participa_componente (id_componente)
+            VALUES ('{ListPlacaMãe.SelectedValue}')", connection);
+            command3.ExecuteNonQuery();
+
+
+            var command5 = new MySqlCommand($@"
+            INSERT INTO clientes (CNPJ)
+            VALUES ('{txtCnpjUsuario.Text}')", connection);
+            command5.ExecuteNonQuery();
+
+            var command6 = new MySqlCommand($@"
+            INSERT INTO clientes (EMAIL)
+            VALUES ('{txtEmailUsuario.Text}')", connection);
+            command6.ExecuteNonQuery();
+            connection.Close();
+            if (estoque < qtd)
+>>>>>>> af55b685f2b3d5b2eb77d6e0ad9a8837b019de30
             {
 
                 return validaCnpj(cnpj);
@@ -353,6 +419,7 @@ namespace frontendteste24_08
             string email_user = Convert.ToString(txtEmailUsuario.Text);
             string cnpj_user = Convert.ToString(txtCnpjUsuario.Text);
 
+<<<<<<< HEAD
             if (validaCnpj(cnpj_user) == false)
             {
                 SiteMaster.ExibirAlert(this, "Cnpj inválido!");
@@ -435,6 +502,13 @@ namespace frontendteste24_08
             txtEmailUsuario.Text = "";
             txtCnpjUsuario.Text = "";
         }
+=======
+
+        }
+
+        }        
+
+>>>>>>> af55b685f2b3d5b2eb77d6e0ad9a8837b019de30
     }
 
 }
