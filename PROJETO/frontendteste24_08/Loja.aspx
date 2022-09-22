@@ -19,8 +19,7 @@
 >>>>>>> 61ae249a15b0ce8ccbcaa022cc8e430f68362d1d
         body {  
             background-image: url(/imgs/preto.jpg);
-            background: linear-gradient(75deg, rgba(2,6,56,1) 0%, rgba(1,4,41,1) 5%, rgba(0,2,22,1) 12%, rgba(0,0,0,1) 61%, rgba(0,0,0,1) 70%, rgba(0,4,54,1) 86%, rgba(0,3,51,1) 97%);
-            
+            background: linear-gradient(75deg, rgba(2,6,56,1) 0%, rgba(1,4,41,1) 5%, rgba(0,2,22,1) 12%, rgba(0,0,0,1) 61%, rgba(0,0,0,1) 70%, rgba(0,4,54,1) 86%, rgba(0,3,51,1) 97%); 
         }       
 
         .fontedotitulo{

@@ -45,16 +45,20 @@ namespace frontendteste24_08
                 linha["comprar"] = comprar;
                 linha["gastos"] = valor_t.ToString("C");
 
-
                 tabela.Rows.Add(linha);
             }
             Session["tabela"] = tabela;
             grdComponentes.DataSource = tabela;
             grdComponentes.DataBind();
 
-            
             connection.Close();
             valor_total.Text = Convert.ToString(total_geral.ToString("C"));
+
+            if (Session["logado"]==null)
+            {
+                Response.Redirect("Login.aspx");
+                return;
+            }
         }
 
         protected void compra_realizada_Click(object sender, EventArgs e)
