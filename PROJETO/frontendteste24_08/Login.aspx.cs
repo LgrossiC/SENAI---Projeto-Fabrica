@@ -18,9 +18,11 @@ namespace frontendteste24_08
         {
             if ((txtuser.Text == "admin") && (txtsenha.Text == "admin"))
             {
+                Session["logado"] = "sim";
                 Response.Redirect("Admin.aspx");
+                
             }
-
+            
             else
             {
                 SiteMaster.ExibirAlert(this, "Usuário e/ou senha incorreto(s)!");
