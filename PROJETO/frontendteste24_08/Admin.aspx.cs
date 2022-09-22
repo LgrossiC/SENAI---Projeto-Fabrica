@@ -60,5 +60,14 @@ namespace frontendteste24_08
                 return;
             }
         }
+
+        protected void compra_realizada_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            var comando = new MySqlCommand($@"UPDATE componentes SET estoque = {1000}", connection);
+            comando.ExecuteNonQuery();
+            connection.Close();
+            Response.Redirect("Admin.aspx");
+        }
     }
 }
