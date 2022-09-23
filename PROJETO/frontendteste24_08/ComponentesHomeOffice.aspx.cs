@@ -343,10 +343,7 @@ namespace frontendteste24_08
 
         }
 
-
-        
-
-
+       
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
         {
@@ -379,6 +376,7 @@ namespace frontendteste24_08
 
                 txtCnpjUsuario.Text = "";
  
+
                 return;
             }
 
@@ -386,10 +384,7 @@ namespace frontendteste24_08
             {
                 SiteMaster.ExibirAlert(this, "E-mail inválido!");
 
-                txtEmailUsuario.Text = "";
-
-
-                txtEmailUsuario.Text = "";
+                txtEmailUsuario.Text = "";          
 
                 return;
             }

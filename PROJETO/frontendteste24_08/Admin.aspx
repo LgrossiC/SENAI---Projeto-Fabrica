@@ -102,6 +102,7 @@
     <asp:TextBox runat="server" ID="valor_total" disabled="false" CssClass="textbox"></asp:TextBox>
     <asp:Button runat="server" ID="compra_realizada" Text="Realizar Compra" CssClass="botão" OnClick="compra_realizada_Click" />    
      <button type="button" value="imprimir" class="botão" onclick="window.print();" >Imprimir</button>
+
     </div>
 
 </asp:Content>
