@@ -53,10 +53,7 @@
                         <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/ComponentesHomeOffice">Componentes</a></li>
                         <li style="color:white; font-family:'Lucida Console'"><a runat="server" href="~/Admin">Admin</a></li>
                     </ul>
-                <}
-                    
-                    
-                    /div>
+                </div>
             </div>
     </div>
 

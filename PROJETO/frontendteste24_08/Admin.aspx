@@ -104,7 +104,4 @@
      <button type="button" value="imprimir" class="botão" onclick="window.print();" >Imprimir</button>
     </div>
 
-
-<asp:TextBox runat="server" ID="valor_total" ></asp:TextBox>
-
 </asp:Content>
