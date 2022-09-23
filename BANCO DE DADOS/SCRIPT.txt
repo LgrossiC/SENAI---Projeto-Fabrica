@@ -2,7 +2,9 @@ CREATE DATABASE loja_pc;
 USE loja_pc;
 CREATE TABLE clientes(
     id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    nome varchar(100)
+    nome varchar(100),
+    email varchar(100),
+   cnpj varchar(13)
 );
 CREATE TABLE computadores(
 id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
