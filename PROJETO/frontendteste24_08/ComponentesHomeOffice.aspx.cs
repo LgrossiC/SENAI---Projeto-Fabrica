@@ -375,6 +375,10 @@ namespace frontendteste24_08
                 SiteMaster.ExibirAlert(this, "Cnpj inválido!");
 
                 txtCnpjUsuario.Text = "";
+
+                txtCnpjUsuario.Text = "";
+ 
+
                 return;
             }
 
@@ -383,6 +387,11 @@ namespace frontendteste24_08
                 SiteMaster.ExibirAlert(this, "E-mail inválido!");
 
                 txtEmailUsuario.Text = "";
+
+
+
+                txtEmailUsuario.Text = "";
+
 
                 return;
             }

@@ -42,6 +42,30 @@ namespace frontendteste24_08
                                                 order by c.descrição;", connection);
             var reader = commando.ExecuteReader();
             while (reader.Read())
+
+            {             
+                int estoque = reader.GetInt32("estoque");
+                double valor_c = reader.GetDouble("valor");             
+                var linha = tabela.NewRow();
+                linha["descricao"] = reader.GetString("descrição");
+                linha["tipo"] = reader.GetString("tipo");
+                int comprar = 1000 - estoque;
+                double valor_t = valor_c * comprar;
+                total_geral = total_geral + valor_t;
+                linha["comprar"] = comprar;
+                linha["gastos"] = valor_t.ToString("C");
+
+                tabela.Rows.Add(linha);
+            }
+            Session["tabela"] = tabela;
+            grdComponentes.DataSource = tabela;
+            grdComponentes.DataBind();
+
+            connection.Close();
+            valor_total.Text = Convert.ToString(total_geral.ToString("C"));
+
+            if (Session["logado"]==null) // redireciona para a página de login ao tentar acessar o relatório sem ainda ter logado com usuário e senha específicos do admin.
+
             {
                 int estoque = reader.GetInt32("estoque");
                 int vendidos = reader.GetInt32("sum(quantidade)");
