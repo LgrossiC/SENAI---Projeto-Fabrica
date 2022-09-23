@@ -1,0 +1,71 @@
+CREATE DATABASE loja_pc;
+USE loja_pc;
+CREATE TABLE clientes(
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(100),
+    email varchar(100),
+   cnpj varchar(13)
+);
+CREATE TABLE computadores(
+id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descrição varchar(100),
+    estoque int not null
+);
+CREATE TABLE compra(
+id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+id_pc int,
+    id_cliente int,
+    FOREIGN KEY(id_pc) REFERENCES computadores(id),
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id),
+    quantidade int
+);
+CREATE TABLE componentes(
+id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+id_pc int,
+FOREIGN KEY(id_pc) REFERENCES computadores(id),
+    descrição varchar(100),
+    estoque int,
+valor double,
+    tipo varchar(50)
+);
+CREATE TABLE participa_componente(
+id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    id_componente int,
+FOREIGN KEY(id_componente) REFERENCES componentes(id),
+    id_compra int,
+    valor float,
+FOREIGN KEY(id_compra) REFERENCES compra(id)
+);
+
+INSERT INTO computadores VALUES
+(NULL,"Iniciante",3000),
+(NULL,"Home Office",2000),
+(NULL,"Gamer",1000);
+
+
+INSERT INTO componentes VALUES
+(NULL, 1, "AMD Ryzen 5 5600G",700,879.00,"processador"),
+(NULL, 1, "Gigabyte B450M ",700,579.00,"placa mãe"),
+(NULL, 1, "Kingston Fury Beast, 8GB, 3000MHz, DDR4",700,319.99,"RAM"),
+(NULL, 1, "Kingston NV1 500 GB",700,284.99,"SSD"),
+(NULL, 1, "Cooler Master MWE V2, 450W",700,19.99,"Fonte"),
+(NULL, 1, "TGT B110",700,80.00,"Gabinete"),
+(NULL, 1, "Bright MINI SUBWOOFER 2.1 USB 0590",700,99.90,"Saida de som"),
+
+(NULL, 2, "Intel Core i5-10400",600,1049.99,"processador"),
+(NULL, 2, "Gigabyte H410M H V3 ",600,761.90,"placa mãe"),
+(NULL, 2, "Crucial Ballistix, 8GB, 2666MHz, DDR4",600,229.90,"RAM"),
+(NULL, 2, "Kingston NV1 500 GB",600,319.99,"SSD"),
+(NULL, 2, "XPG, Pylon, 550W",600,412.08,"Fonte"),
+(NULL, 2, "Aerocool Mini Tower RGB",600,289.99,"Gabinete"),
+(NULL, 2, "Nvidia GeForce RTX 3050",600,1749.90,"Placa de vídeo"),
+
+(NULL, 3, "AMD Ryzen 5 5600X",500,1289.99,"processador"),
+(NULL, 3, "Gigabyte Aorus B450 Aorus M ",500,1299.49,"placa mãe"),
+(NULL, 3, "Kingston Fury Beast, 8GB, 3000MHz, DDR4",500,319.99,"RAM"),
+(NULL, 3, "Kingston NV1 500 GB",500,319.99,"SSD"),
+(NULL, 3, "XPG Pylon, 750W",500,499.99,"Fonte"),
+(NULL, 3, "Corsair Carbide Series Spec Delta",500,800.00,"Gabinete"),
+(NULL, 3, "Nvidia GeForce RTX 3070 Ti",500,463.00,"Placa de vídeo");
+
+UPDATE `componentes` SET `estoque`=0;
