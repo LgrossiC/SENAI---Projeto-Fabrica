@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -341,12 +342,29 @@ namespace frontendteste24_08
             }
 
         }
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 691022db847aff1f7728ba054e2bafb89f396528
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e) //BOTÃO PARA FINALIZAR VENDA.
         {
             if ((txtNomeUsuario.Text == "") || (txtEmailUsuario.Text == "") || (txtCnpjUsuario.Text == ""))
             {
                 SiteMaster.ExibirAlert(this, "Todos os campos são obrigatórios");
+<<<<<<< HEAD
+                txtNomeUsuario.Text = "";
+                txtEmailUsuario.Text = "";
+                txtCnpjUsuario.Text = "";
+                return;
+            }
+
+            if (!Regex.IsMatch(txtNomeUsuario.Text, @"^[a-zA-Z]"))
+            {
+                SiteMaster.ExibirAlert(this, "Insira um nome válido");
+                txtNomeUsuario.Text = "";
+=======
+>>>>>>> 691022db847aff1f7728ba054e2bafb89f396528
                 return;
             }
 
@@ -356,12 +374,20 @@ namespace frontendteste24_08
             if (validaCnpj(cnpj_user) == false)
             {
                 SiteMaster.ExibirAlert(this, "Cnpj inválido!");
+<<<<<<< HEAD
+                txtCnpjUsuario.Text = "";
+=======
+>>>>>>> 691022db847aff1f7728ba054e2bafb89f396528
                 return;
             }
 
             if (ValidaEmail(email_user) == false)
             {
                 SiteMaster.ExibirAlert(this, "E-mail inválido!");
+<<<<<<< HEAD
+                txtEmailUsuario.Text = "";
+=======
+>>>>>>> 691022db847aff1f7728ba054e2bafb89f396528
                 return;
             }
 
