@@ -54,7 +54,7 @@ namespace frontendteste24_08
             connection.Close();
             valor_total.Text = Convert.ToString(total_geral.ToString("C"));
 
-            if (Session["logado"]==null)
+            if (Session["logado"]==null) // redireciona para a página de login ao tentar acessar o relatório sem ainda ter logado com usuário e senha específicos do admin.
             {
                 Response.Redirect("Login.aspx");
                 return;
