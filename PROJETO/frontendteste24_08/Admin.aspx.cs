@@ -12,6 +12,8 @@ namespace frontendteste24_08
     public partial class Admin : System.Web.UI.Page
     {
         private MySqlConnection connection;
+        private MySqlConnection connection2;
+        int comprar;
 
         protected void Page_Load(object sender, EventArgs e) //Quando a página carrega.
         {
@@ -19,8 +21,9 @@ namespace frontendteste24_08
             {
             }
 
-            connection = new MySqlConnection(SiteMaster.ConnectionString);    
-                         
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
+            connection2 = new MySqlConnection(SiteMaster.ConnectionString);
+
             DataTable tabela = new DataTable();
 
             tabela.Columns.Add("descricao");
@@ -28,44 +31,65 @@ namespace frontendteste24_08
             tabela.Columns.Add("comprar");
             tabela.Columns.Add("gastos");
 
+
             connection.Open();
             double total_geral = 0;
-            var commando = new MySqlCommand($"SELECT descrição, tipo, estoque, valor FROM componentes", connection);
+
+            var commando = new MySqlCommand($@"select c.descrição, c.tipo, c.estoque, c.valor, sum(quantidade) from participa_componente p
+                                                inner join compra v on p.id_compra = v.id
+                                                inner join componentes c on p.id_componente = c.id
+                                                group by p.id_componente, c.descrição
+                                                order by c.descrição;", connection);
             var reader = commando.ExecuteReader();
             while (reader.Read())
-            {             
-                int estoque = reader.GetInt32("estoque");
-                double valor_c = reader.GetDouble("valor");             
-                var linha = tabela.NewRow();
-                linha["descricao"] = reader.GetString("descrição");
-                linha["tipo"] = reader.GetString("tipo");
-                int comprar = 1000 - estoque;
-                double valor_t = valor_c * comprar;
-                total_geral = total_geral + valor_t;
-                linha["comprar"] = comprar;
-                linha["gastos"] = valor_t.ToString("C");
-
-                tabela.Rows.Add(linha);
-            }
-            Session["tabela"] = tabela;
-            grdComponentes.DataSource = tabela;
-            grdComponentes.DataBind();
-
-            connection.Close();
-            valor_total.Text = Convert.ToString(total_geral.ToString("C"));
-
-            if (Session["logado"]==null) // redireciona para a página de login ao tentar acessar o relatório sem ainda ter logado com usuário e senha específicos do admin.
             {
-                Response.Redirect("Login.aspx");
-                return;
+                int estoque = reader.GetInt32("estoque");
+                int vendidos = reader.GetInt32("sum(quantidade)");
+
+                if (vendidos > estoque)
+                {
+                    double valor_c = reader.GetDouble("valor");
+                    var linha = tabela.NewRow();
+                    comprar = vendidos - estoque;
+                    double valor_t = valor_c * comprar;
+                    total_geral = total_geral + valor_t;
+                    linha["descricao"] = reader.GetString("descrição");
+                    linha["tipo"] = reader.GetString("tipo");
+                    linha["comprar"] = comprar;
+                    linha["gastos"] = valor_t.ToString("C");
+                    tabela.Rows.Add(linha);
+                    Session["tabela"] = tabela;
+                    grdComponentes.DataSource = tabela;
+                    grdComponentes.DataBind();
+                    valor_total.Text = Convert.ToString(total_geral.ToString("C"));
+                }
             }
+            connection.Close();
         }
 
         protected void compra_realizada_Click(object sender, EventArgs e)
         {
             connection.Open();
-            var comando = new MySqlCommand($@"UPDATE componentes SET estoque = {1000}", connection);
-            comando.ExecuteNonQuery();
+            var commando = new MySqlCommand($@"select c.estoque, sum(quantidade), c.id from participa_componente p
+                                                inner join compra v on p.id_compra = v.id
+                                                inner join componentes c on p.id_componente = c.id
+                                                group by p.id_componente, c.descrição
+                                                order by c.descrição;", connection);
+            var reader = commando.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32("id");
+                int estoque = reader.GetInt32("estoque");
+                int vendidos = reader.GetInt32("sum(quantidade)");
+
+                if (estoque < vendidos)
+                {
+                    connection2.Open();
+                    var comando1 = new MySqlCommand($@"UPDATE componentes SET estoque = {vendidos} where id = {id}", connection2);
+                    comando1.ExecuteNonQuery();
+                    connection2.Close();
+                }
+            }
             connection.Close();
             Response.Redirect("Admin.aspx");
         }
